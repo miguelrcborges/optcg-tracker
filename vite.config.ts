@@ -33,12 +33,12 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,webp,woff2}'],
         navigateFallback: 'index.html',
         runtimeCaching: [
           {
             urlPattern:
-              /^https:\/\/limitlesstcg\.nyc3\.cdn\.digitaloceanspaces\.com\/one-piece\/.*/i,
+              /^https:\/\/(?:limitlesstcg\.nyc3\.cdn\.digitaloceanspaces\.com\/one-piece\/|optcgapps\.com\/cards\/|tcgplayer-cdn\.tcgplayer\.com\/product\/).*/i,
             handler: 'CacheFirst',
             options: {
               cacheName: 'leader-card-art',

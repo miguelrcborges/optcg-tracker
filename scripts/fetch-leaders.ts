@@ -5,6 +5,8 @@
  *
  * The API returns alternate arts and reprints as separate rows that share a
  * card_set_id. We keep one row per card id, preferring the clean base art.
+ * Promo leaders live in a separate feed and some are missing from it entirely,
+ * so those are merged in from the supplement below.
  */
 
 type ApiCard = {
@@ -14,7 +16,7 @@ type ApiCard = {
   card_type: string;
   set_name: string;
   set_id: string;
-  card_image: string;
+  card_image: string | null;
 };
 
 type Leader = {
@@ -27,10 +29,50 @@ type Leader = {
   imageUrl: string;
 };
 
-const SOURCES = [
+const SET_SOURCES = [
   'https://optcgapi.com/api/allSetCards/',
   'https://optcgapi.com/api/allSTCards/',
 ];
+
+const PROMO_SOURCE = 'https://optcgapi.com/api/allPromos/';
+
+/**
+ * Promo leaders that the API's promo feed does not cover yet. Kept here so the
+ * bundled list stays complete until the upstream data catches up.
+ */
+const EXTRA_PROMOS: ApiCard[] = [
+  {
+    card_set_id: 'P-122',
+    card_name: 'Ace & Sabo & Luffy',
+    card_color: 'Red',
+    card_type: 'Leader',
+    set_name: 'One Piece Promotion Cards',
+    set_id: 'P',
+    card_image: '',
+  },
+  {
+    card_set_id: 'P-999',
+    card_name: 'Monkey D. Luffy',
+    card_color: 'Red Green Blue Purple Black Yellow',
+    card_type: 'Leader',
+    set_name: 'One Piece Promotion Cards',
+    set_id: 'P',
+    card_image: '',
+  },
+];
+
+/**
+ * Limitless has no art for a few event-only promos, so fall back to the other
+ * public card databases for those ids. P-122 is bundled locally because its
+ * source blocks cross-origin hotlinking.
+ */
+const ART_OVERRIDES: Record<string, string> = {
+  'P-122': 'leaders/P-122.webp',
+  'P-700': 'https://tcgplayer-cdn.tcgplayer.com/product/634531_in_1000x1000.jpg',
+  'P-800': 'https://optcgapps.com/cards/P/P-800.webp',
+  'P-900': 'https://optcgapps.com/cards/P/P-900.webp',
+  'P-999': 'https://optcgapps.com/cards/P/P-999.webp',
+};
 
 const COLORS = ['Red', 'Blue', 'Green', 'Purple', 'Yellow', 'Black'];
 
@@ -45,18 +87,17 @@ async function fetchCards(url: string): Promise<ApiCard[]> {
 function stripDecorations(raw: string): string {
   let name = raw.trim();
 
-  // Remove trailing card-code suffixes like "Trafalgar Law - OP14-001".
-  name = name.replace(/\s+-\s+[A-Z]{2,4}\d{2}-\d{3}\s*$/i, '');
-
-  // Remove trailing "(001)", "(OP01-001)", "(Alternate Art)" markers.
-  for (let i = 0; i < 3; i += 1) {
-    const next = name.replace(
-      /\s*\((?:[^()]*\d[^()]*|alternate art|parallel)\)\s*$/i,
-      '',
-    );
+  // Remove trailing parenthetical markers such as "(001)", "(Alternate Art)",
+  // "(OP10 Release Event)" or "(Sealed Battle 2023 Vol. 1)".
+  for (let i = 0; i < 4; i += 1) {
+    const next = name.replace(/\s*\([^()]*\)\s*$/, '');
     if (next === name) break;
     name = next;
   }
+
+  // Remove trailing card-code suffixes like "Trafalgar Law - OP14-001",
+  // "Roronoa Zoro - OP01-001" or "Nami - P-117".
+  name = name.replace(/\s+-\s+[A-Z]{1,4}\d{0,2}(?:-\d{3})?\s*$/i, '');
 
   // Normalise dots used as name separators: "Monkey.D.Luffy" -> "Monkey D. Luffy".
   name = name.replace(/\./g, (_dot, offset: number, whole: string) => {
@@ -74,7 +115,7 @@ function stripDecorations(raw: string): string {
 
 function qualityScore(card: ApiCard): number {
   const name = card.card_name.toLowerCase();
-  const image = card.card_image.toLowerCase();
+  const image = (card.card_image ?? '').toLowerCase();
   let score = 0;
 
   if (/_p\d+/.test(image)) score += 20;
@@ -91,8 +132,15 @@ function toLeader(card: ApiCard): Leader {
     .map((color) => color.trim())
     .filter((color) => COLORS.includes(color));
 
-  const setCode = card.card_set_id.split('-')[0] ?? card.set_id;
-  const imageUrl = `https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/${setCode}/${card.card_set_id}_EN.webp`;
+  const prefix = card.card_set_id.split('-')[0] ?? card.set_id;
+  const isPromo = prefix === 'P';
+
+  // Promo ids share a single "P" set, so expose the full card id in the picker
+  // to keep e.g. the all-color Luffy promos distinguishable.
+  const setCode = isPromo ? card.card_set_id : prefix;
+  const imageUrl =
+    ART_OVERRIDES[card.card_set_id] ??
+    `https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/${prefix}/${card.card_set_id}_EN.webp`;
 
   return {
     id: card.card_set_id,
@@ -105,7 +153,16 @@ function toLeader(card: ApiCard): Leader {
   };
 }
 
-const cards = (await Promise.all(SOURCES.map(fetchCards))).flat().filter(
+const setCards = (await Promise.all(SET_SOURCES.map(fetchCards))).flat();
+const setCardIds = new Set(setCards.map((card) => card.card_set_id));
+
+// The promo feed also reprints set leaders under the "One Piece Promotion Cards"
+// set name. Keep the original set row for those, and only add promo-exclusive ids.
+const promoLeaders = (await fetchCards(PROMO_SOURCE)).filter(
+  (card) => card.card_type === 'Leader' && !setCardIds.has(card.card_set_id),
+);
+
+const cards = [...setCards, ...promoLeaders, ...EXTRA_PROMOS].filter(
   (card) => card.card_type === 'Leader',
 );
 
@@ -123,7 +180,8 @@ const leaders = [...bestById.values()]
 
 const payload = {
   generatedAt: new Date().toISOString(),
-  source: 'optcgapi.com (card data) + limitlesstcg CDN (art)',
+  source:
+    'optcgapi.com (card data) + limitlesstcg, optcgapps and tcgplayer CDNs (art) + bundled P-122 art',
   count: leaders.length,
   leaders,
 };

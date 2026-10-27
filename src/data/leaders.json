@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-27T18:59:12.593Z",
-  "source": "optcgapi.com (card data) + limitlesstcg CDN (art)",
-  "count": 138,
+  "generatedAt": "2026-10-27T20:23:42.986Z",
+  "source": "optcgapi.com (card data) + limitlesstcg, optcgapps and tcgplayer CDNs (art) + bundled P-122 art",
+  "count": 148,
   "leaders": [
     {
       "id": "ST22-001",
@@ -13,6 +13,17 @@
       "setName": "Starter Deck 22: Ace & Newgate",
       "setCode": "ST22",
       "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST22/ST22-001_EN.webp"
+    },
+    {
+      "id": "P-122",
+      "name": "Ace & Sabo & Luffy",
+      "colors": [
+        "Red"
+      ],
+      "setId": "P",
+      "setName": "One Piece Promotion Cards",
+      "setCode": "P-122",
+      "imageUrl": "leaders/P-122.webp"
     },
     {
       "id": "OP03-022",
@@ -932,6 +943,81 @@
       "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP17/OP17-079_EN.webp"
     },
     {
+      "id": "P-047",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Blue"
+      ],
+      "setId": "P",
+      "setName": "One Piece Promotion Cards",
+      "setCode": "P-047",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/P/P-047_EN.webp"
+    },
+    {
+      "id": "P-700",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Blue",
+        "Green",
+        "Purple",
+        "Red",
+        "Black",
+        "Yellow"
+      ],
+      "setId": "P",
+      "setName": "One Piece Promotion Cards",
+      "setCode": "P-700",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634531_in_1000x1000.jpg"
+    },
+    {
+      "id": "P-800",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Blue",
+        "Green",
+        "Purple",
+        "Red",
+        "Black",
+        "Yellow"
+      ],
+      "setId": "P",
+      "setName": "One Piece Promotion Cards",
+      "setCode": "P-800",
+      "imageUrl": "https://optcgapps.com/cards/P/P-800.webp"
+    },
+    {
+      "id": "P-900",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Blue",
+        "Green",
+        "Purple",
+        "Red",
+        "Black",
+        "Yellow"
+      ],
+      "setId": "P",
+      "setName": "One Piece Promotion Cards",
+      "setCode": "P-900",
+      "imageUrl": "https://optcgapps.com/cards/P/P-900.webp"
+    },
+    {
+      "id": "P-999",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Red",
+        "Green",
+        "Blue",
+        "Purple",
+        "Black",
+        "Yellow"
+      ],
+      "setId": "P",
+      "setName": "One Piece Promotion Cards",
+      "setCode": "P-999",
+      "imageUrl": "https://optcgapps.com/cards/P/P-999.webp"
+    },
+    {
       "id": "ST01-001",
       "name": "Monkey D. Luffy",
       "colors": [
@@ -1031,6 +1117,17 @@
       "setName": "A Fist of Divine Speed",
       "setCode": "OP11",
       "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP11/OP11-041_EN.webp"
+    },
+    {
+      "id": "P-117",
+      "name": "Nami",
+      "colors": [
+        "Blue"
+      ],
+      "setId": "P",
+      "setName": "One Piece Promotion Cards",
+      "setCode": "P-117",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/P/P-117_EN.webp"
     },
     {
       "id": "EB03-001",
@@ -1277,6 +1374,18 @@
       "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP05/OP05-041_EN.webp"
     },
     {
+      "id": "P-076",
+      "name": "Sakazuki",
+      "colors": [
+        "Blue",
+        "Black"
+      ],
+      "setId": "P",
+      "setName": "One Piece Promotion Cards",
+      "setCode": "P-076",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/P/P-076_EN.webp"
+    },
+    {
       "id": "ST06-001",
       "name": "Sakazuki",
       "colors": [
@@ -1472,6 +1581,18 @@
       "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP14/OP14-001_EN.webp"
     },
     {
+      "id": "P-086",
+      "name": "Trafalgar Law",
+      "colors": [
+        "Purple",
+        "Red"
+      ],
+      "setId": "P",
+      "setName": "One Piece Promotion Cards",
+      "setCode": "P-086",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/P/P-086_EN.webp"
+    },
+    {
       "id": "ST10-001",
       "name": "Trafalgar Law",
       "colors": [
@@ -1506,6 +1627,17 @@
       "setName": "Wings of the Captain",
       "setCode": "OP06",
       "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP06/OP06-001_EN.webp"
+    },
+    {
+      "id": "P-011",
+      "name": "Uta",
+      "colors": [
+        "Red"
+      ],
+      "setId": "P",
+      "setName": "One Piece Promotion Cards",
+      "setCode": "P-011",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/P/P-011_EN.webp"
     },
     {
       "id": "ST11-001",
