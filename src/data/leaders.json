@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-27T20:23:42.986Z",
-  "source": "optcgapi.com (card data) + limitlesstcg, optcgapps and tcgplayer CDNs (art) + bundled P-122 art",
-  "count": 148,
+  "generatedAt": "2026-10-27T20:31:08.754Z",
+  "source": "optcgapi.com (card data) + limitlesstcg CDN (art) + bundled P-122 art",
+  "count": 144,
   "leaders": [
     {
       "id": "ST22-001",
@@ -952,70 +952,6 @@
       "setName": "One Piece Promotion Cards",
       "setCode": "P-047",
       "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/P/P-047_EN.webp"
-    },
-    {
-      "id": "P-700",
-      "name": "Monkey D. Luffy",
-      "colors": [
-        "Blue",
-        "Green",
-        "Purple",
-        "Red",
-        "Black",
-        "Yellow"
-      ],
-      "setId": "P",
-      "setName": "One Piece Promotion Cards",
-      "setCode": "P-700",
-      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634531_in_1000x1000.jpg"
-    },
-    {
-      "id": "P-800",
-      "name": "Monkey D. Luffy",
-      "colors": [
-        "Blue",
-        "Green",
-        "Purple",
-        "Red",
-        "Black",
-        "Yellow"
-      ],
-      "setId": "P",
-      "setName": "One Piece Promotion Cards",
-      "setCode": "P-800",
-      "imageUrl": "https://optcgapps.com/cards/P/P-800.webp"
-    },
-    {
-      "id": "P-900",
-      "name": "Monkey D. Luffy",
-      "colors": [
-        "Blue",
-        "Green",
-        "Purple",
-        "Red",
-        "Black",
-        "Yellow"
-      ],
-      "setId": "P",
-      "setName": "One Piece Promotion Cards",
-      "setCode": "P-900",
-      "imageUrl": "https://optcgapps.com/cards/P/P-900.webp"
-    },
-    {
-      "id": "P-999",
-      "name": "Monkey D. Luffy",
-      "colors": [
-        "Red",
-        "Green",
-        "Blue",
-        "Purple",
-        "Black",
-        "Yellow"
-      ],
-      "setId": "P",
-      "setName": "One Piece Promotion Cards",
-      "setCode": "P-999",
-      "imageUrl": "https://optcgapps.com/cards/P/P-999.webp"
     },
     {
       "id": "ST01-001",

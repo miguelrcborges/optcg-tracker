@@ -38,7 +38,7 @@ export default defineConfig({
         runtimeCaching: [
           {
             urlPattern:
-              /^https:\/\/(?:limitlesstcg\.nyc3\.cdn\.digitaloceanspaces\.com\/one-piece\/|optcgapps\.com\/cards\/|tcgplayer-cdn\.tcgplayer\.com\/product\/).*/i,
+              /^https:\/\/limitlesstcg\.nyc3\.cdn\.digitaloceanspaces\.com\/one-piece\/.*/i,
             handler: 'CacheFirst',
             options: {
               cacheName: 'leader-card-art',

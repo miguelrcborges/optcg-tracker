@@ -50,28 +50,20 @@ const EXTRA_PROMOS: ApiCard[] = [
     set_id: 'P',
     card_image: '',
   },
-  {
-    card_set_id: 'P-999',
-    card_name: 'Monkey D. Luffy',
-    card_color: 'Red Green Blue Purple Black Yellow',
-    card_type: 'Leader',
-    set_name: 'One Piece Promotion Cards',
-    set_id: 'P',
-    card_image: '',
-  },
 ];
 
 /**
- * Limitless has no art for a few event-only promos, so fall back to the other
- * public card databases for those ids. P-122 is bundled locally because its
- * source blocks cross-origin hotlinking.
+ * Event-only promo printings that are not real, playable leaders. Excluded even
+ * when the promo feed lists them.
+ */
+const EXCLUDED_LEADER_IDS = new Set(['P-700', 'P-800', 'P-900', 'P-999']);
+
+/**
+ * Limitless has no art for P-122, so its art is bundled locally (the original
+ * source blocks cross-origin hotlinking).
  */
 const ART_OVERRIDES: Record<string, string> = {
   'P-122': 'leaders/P-122.webp',
-  'P-700': 'https://tcgplayer-cdn.tcgplayer.com/product/634531_in_1000x1000.jpg',
-  'P-800': 'https://optcgapps.com/cards/P/P-800.webp',
-  'P-900': 'https://optcgapps.com/cards/P/P-900.webp',
-  'P-999': 'https://optcgapps.com/cards/P/P-999.webp',
 };
 
 const COLORS = ['Red', 'Blue', 'Green', 'Purple', 'Yellow', 'Black'];
@@ -163,7 +155,8 @@ const promoLeaders = (await fetchCards(PROMO_SOURCE)).filter(
 );
 
 const cards = [...setCards, ...promoLeaders, ...EXTRA_PROMOS].filter(
-  (card) => card.card_type === 'Leader',
+  (card) =>
+    card.card_type === 'Leader' && !EXCLUDED_LEADER_IDS.has(card.card_set_id),
 );
 
 const bestById = new Map<string, ApiCard>();
@@ -181,7 +174,7 @@ const leaders = [...bestById.values()]
 const payload = {
   generatedAt: new Date().toISOString(),
   source:
-    'optcgapi.com (card data) + limitlesstcg, optcgapps and tcgplayer CDNs (art) + bundled P-122 art',
+    'optcgapi.com (card data) + limitlesstcg CDN (art) + bundled P-122 art',
   count: leaders.length,
   leaders,
 };
