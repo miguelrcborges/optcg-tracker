@@ -1,0 +1,1591 @@
+{
+  "generatedAt": "2026-10-27T18:59:12.593Z",
+  "source": "optcgapi.com (card data) + limitlesstcg CDN (art)",
+  "count": 138,
+  "leaders": [
+    {
+      "id": "ST22-001",
+      "name": "Ace & Newgate",
+      "colors": [
+        "Blue"
+      ],
+      "setId": "ST-22",
+      "setName": "Starter Deck 22: Ace & Newgate",
+      "setCode": "ST22",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST22/ST22-001_EN.webp"
+    },
+    {
+      "id": "OP03-022",
+      "name": "Arlong",
+      "colors": [
+        "Green",
+        "Yellow"
+      ],
+      "setId": "OP-03",
+      "setName": "Pillars of Strength",
+      "setCode": "OP03",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP03/OP03-022_EN.webp"
+    },
+    {
+      "id": "OP05-002",
+      "name": "Belo Betty",
+      "colors": [
+        "Red",
+        "Yellow"
+      ],
+      "setId": "OP-05",
+      "setName": "Awakening of the New Era",
+      "setCode": "OP05",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP05/OP05-002_EN.webp"
+    },
+    {
+      "id": "OP07-038",
+      "name": "Boa Hancock",
+      "colors": [
+        "Blue"
+      ],
+      "setId": "OP-07",
+      "setName": "500 Years in the Future",
+      "setCode": "OP07",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP07/OP07-038_EN.webp"
+    },
+    {
+      "id": "OP14-041",
+      "name": "Boa Hancock",
+      "colors": [
+        "Blue",
+        "Yellow"
+      ],
+      "setId": "OP14-EB04",
+      "setName": "The Azure Sea's Seven",
+      "setCode": "OP14",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP14/OP14-041_EN.webp"
+    },
+    {
+      "id": "OP15-022",
+      "name": "Brook",
+      "colors": [
+        "Green",
+        "Black"
+      ],
+      "setId": "OP15-EB04",
+      "setName": "Adventure on Kami's Island",
+      "setCode": "OP15",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP15/OP15-022_EN.webp"
+    },
+    {
+      "id": "OP09-042",
+      "name": "Buggy",
+      "colors": [
+        "Blue"
+      ],
+      "setId": "OP-09",
+      "setName": "Emperors in the New World",
+      "setCode": "OP09",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP09/OP09-042_EN.webp"
+    },
+    {
+      "id": "OP16-041",
+      "name": "Buggy",
+      "colors": [
+        "Blue"
+      ],
+      "setId": "OP-16",
+      "setName": "The Time of Battle",
+      "setCode": "OP16",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP16/OP16-041_EN.webp"
+    },
+    {
+      "id": "OP10-002",
+      "name": "Caesar Clown",
+      "colors": [
+        "Blue",
+        "Red"
+      ],
+      "setId": "OP-10",
+      "setName": "Royal Blood",
+      "setCode": "OP10",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP10/OP10-002_EN.webp"
+    },
+    {
+      "id": "OP08-021",
+      "name": "Carrot",
+      "colors": [
+        "Green"
+      ],
+      "setId": "OP-08",
+      "setName": "Two Legends",
+      "setCode": "OP08",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP08/OP08-021_EN.webp"
+    },
+    {
+      "id": "OP03-099",
+      "name": "Charlotte Katakuri",
+      "colors": [
+        "Yellow"
+      ],
+      "setId": "OP-03",
+      "setName": "Pillars of Strength",
+      "setCode": "OP03",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP03/OP03-099_EN.webp"
+    },
+    {
+      "id": "OP11-062",
+      "name": "Charlotte Katakuri",
+      "colors": [
+        "Purple"
+      ],
+      "setId": "OP-11",
+      "setName": "A Fist of Divine Speed",
+      "setCode": "OP11",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP11/OP11-062_EN.webp"
+    },
+    {
+      "id": "OP03-077",
+      "name": "Charlotte Linlin",
+      "colors": [
+        "Yellow",
+        "Black"
+      ],
+      "setId": "OP-03",
+      "setName": "Pillars of Strength",
+      "setCode": "OP03",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP03/OP03-077_EN.webp"
+    },
+    {
+      "id": "OP17-099",
+      "name": "Charlotte Linlin",
+      "colors": [
+        "Yellow"
+      ],
+      "setId": "OP-17",
+      "setName": "The World's Strongest Warriors",
+      "setCode": "OP17",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP17/OP17-099_EN.webp"
+    },
+    {
+      "id": "ST07-001",
+      "name": "Charlotte Linlin",
+      "colors": [
+        "Yellow"
+      ],
+      "setId": "ST-07",
+      "setName": "Starter Deck 7: Big Mom Pirates",
+      "setCode": "ST07",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST07/ST07-001_EN.webp"
+    },
+    {
+      "id": "OP08-058",
+      "name": "Charlotte Pudding",
+      "colors": [
+        "Purple",
+        "Yellow"
+      ],
+      "setId": "OP-08",
+      "setName": "Two Legends",
+      "setCode": "OP08",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP08/OP08-058_EN.webp"
+    },
+    {
+      "id": "OP01-062",
+      "name": "Crocodile",
+      "colors": [
+        "Blue",
+        "Purple"
+      ],
+      "setId": "OP-01",
+      "setName": "Romance Dawn",
+      "setCode": "OP01",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-062_EN.webp"
+    },
+    {
+      "id": "OP04-058",
+      "name": "Crocodile",
+      "colors": [
+        "Purple",
+        "Yellow"
+      ],
+      "setId": "OP-04",
+      "setName": "Kingdoms of Intrigue",
+      "setCode": "OP04",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP04/OP04-058_EN.webp"
+    },
+    {
+      "id": "OP14-079",
+      "name": "Crocodile",
+      "colors": [
+        "Black"
+      ],
+      "setId": "OP14-EB04",
+      "setName": "The Azure Sea's Seven",
+      "setCode": "OP14",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP14/OP14-079_EN.webp"
+    },
+    {
+      "id": "ST03-001",
+      "name": "Crocodile",
+      "colors": [
+        "Blue"
+      ],
+      "setId": "ST-03",
+      "setName": "Starter Deck 3: The Seven Warlords of The Sea",
+      "setCode": "ST03",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST03/ST03-001_EN.webp"
+    },
+    {
+      "id": "OP01-060",
+      "name": "Donquixote Doflamingo",
+      "colors": [
+        "Blue"
+      ],
+      "setId": "OP-01",
+      "setName": "Romance Dawn",
+      "setCode": "OP01",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-060_EN.webp"
+    },
+    {
+      "id": "OP04-019",
+      "name": "Donquixote Doflamingo",
+      "colors": [
+        "Green",
+        "Purple"
+      ],
+      "setId": "OP-04",
+      "setName": "Kingdoms of Intrigue",
+      "setCode": "OP04",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP04/OP04-019_EN.webp"
+    },
+    {
+      "id": "OP14-060",
+      "name": "Donquixote Doflamingo",
+      "colors": [
+        "Purple"
+      ],
+      "setId": "OP14-EB04",
+      "setName": "The Azure Sea's Seven",
+      "setCode": "OP14",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP14/OP14-060_EN.webp"
+    },
+    {
+      "id": "OP05-022",
+      "name": "Donquixote Rosinante",
+      "colors": [
+        "Blue",
+        "Green"
+      ],
+      "setId": "OP-05",
+      "setName": "Awakening of the New Era",
+      "setCode": "OP05",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP05/OP05-022_EN.webp"
+    },
+    {
+      "id": "OP12-061",
+      "name": "Donquixote Rosinante",
+      "colors": [
+        "Purple",
+        "Yellow"
+      ],
+      "setId": "OP-12",
+      "setName": "Legacy of the Master",
+      "setCode": "OP12",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP12/OP12-061_EN.webp"
+    },
+    {
+      "id": "OP14-020",
+      "name": "Dracule Mihawk",
+      "colors": [
+        "Green"
+      ],
+      "setId": "OP14-EB04",
+      "setName": "The Azure Sea's Seven",
+      "setCode": "OP14",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP14/OP14-020_EN.webp"
+    },
+    {
+      "id": "OP02-001",
+      "name": "Edward Newgate",
+      "colors": [
+        "Red"
+      ],
+      "setId": "OP-02",
+      "setName": "Paramount War",
+      "setCode": "OP02",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP02/OP02-001_EN.webp"
+    },
+    {
+      "id": "OP17-001",
+      "name": "Edward Newgate",
+      "colors": [
+        "Red"
+      ],
+      "setId": "OP-17",
+      "setName": "The World's Strongest Warriors",
+      "setCode": "OP17",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP17/OP17-001_EN.webp"
+    },
+    {
+      "id": "OP02-049",
+      "name": "Emporio Ivankov",
+      "colors": [
+        "Blue"
+      ],
+      "setId": "OP-02",
+      "setName": "Paramount War",
+      "setCode": "OP02",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP02/OP02-049_EN.webp"
+    },
+    {
+      "id": "OP05-098",
+      "name": "Enel",
+      "colors": [
+        "Yellow"
+      ],
+      "setId": "OP-05",
+      "setName": "Awakening of the New Era",
+      "setCode": "OP05",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP05/OP05-098_EN.webp"
+    },
+    {
+      "id": "OP15-058",
+      "name": "Enel",
+      "colors": [
+        "Purple"
+      ],
+      "setId": "OP15-EB04",
+      "setName": "Adventure on Kami's Island",
+      "setCode": "OP15",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP15/OP15-058_EN.webp"
+    },
+    {
+      "id": "OP10-099",
+      "name": "Eustass \"Captain\" Kid",
+      "colors": [
+        "Yellow"
+      ],
+      "setId": "OP-10",
+      "setName": "Royal Blood",
+      "setCode": "OP10",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP10/OP10-099_EN.webp"
+    },
+    {
+      "id": "ST02-001",
+      "name": "Eustass \"Captain\" Kid",
+      "colors": [
+        "Green"
+      ],
+      "setId": "ST-02",
+      "setName": "Starter Deck 2: Worst Generation",
+      "setCode": "ST02",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST02/ST02-001_EN.webp"
+    },
+    {
+      "id": "ST10-003",
+      "name": "Eustass \"Captain\" Kid",
+      "colors": [
+        "Purple",
+        "Red"
+      ],
+      "setId": "ST-10",
+      "setName": "Ultra Deck: The Three Captains",
+      "setCode": "ST10",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST10/ST10-003_EN.webp"
+    },
+    {
+      "id": "OP07-059",
+      "name": "Foxy",
+      "colors": [
+        "Purple"
+      ],
+      "setId": "OP-07",
+      "setName": "500 Years in the Future",
+      "setCode": "OP07",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP07/OP07-059_EN.webp"
+    },
+    {
+      "id": "OP06-080",
+      "name": "Gecko Moria",
+      "colors": [
+        "Black"
+      ],
+      "setId": "OP-06",
+      "setName": "Wings of the Captain",
+      "setCode": "OP06",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP06/OP06-080_EN.webp"
+    },
+    {
+      "id": "OP14-080",
+      "name": "Gecko Moria",
+      "colors": [
+        "Black",
+        "Yellow"
+      ],
+      "setId": "OP14-EB04",
+      "setName": "The Azure Sea's Seven",
+      "setCode": "OP14",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP14/OP14-080_EN.webp"
+    },
+    {
+      "id": "OP13-003",
+      "name": "Gol D. Roger",
+      "colors": [
+        "Purple",
+        "Red"
+      ],
+      "setId": "OP-13",
+      "setName": "Carrying On His Will",
+      "setCode": "OP13",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP13/OP13-003_EN.webp"
+    },
+    {
+      "id": "EB01-021",
+      "name": "Hannyabal",
+      "colors": [
+        "Blue",
+        "Purple"
+      ],
+      "setId": "EB-01",
+      "setName": "Extra Booster: Memorial Collection",
+      "setCode": "EB01",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB01/EB01-021_EN.webp"
+    },
+    {
+      "id": "OP06-020",
+      "name": "Hody Jones",
+      "colors": [
+        "Green"
+      ],
+      "setId": "OP-06",
+      "setName": "Wings of the Captain",
+      "setCode": "OP06",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP06/OP06-020_EN.webp"
+    },
+    {
+      "id": "OP03-058",
+      "name": "Iceburg",
+      "colors": [
+        "Purple"
+      ],
+      "setId": "OP-03",
+      "setName": "Pillars of Strength",
+      "setCode": "OP03",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP03/OP03-058_EN.webp"
+    },
+    {
+      "id": "OP13-079",
+      "name": "Imu",
+      "colors": [
+        "Black"
+      ],
+      "setId": "OP-13",
+      "setName": "Carrying On His Will",
+      "setCode": "OP13",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP13/OP13-079_EN.webp"
+    },
+    {
+      "id": "OP04-020",
+      "name": "Issho",
+      "colors": [
+        "Green",
+        "Black"
+      ],
+      "setId": "OP-04",
+      "setName": "Kingdoms of Intrigue",
+      "setCode": "OP04",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP04/OP04-020_EN.webp"
+    },
+    {
+      "id": "EB04-001",
+      "name": "Jewelry Bonney",
+      "colors": [
+        "Red",
+        "Yellow"
+      ],
+      "setId": "OP15-EB04",
+      "setName": "Adventure on Kami's Island",
+      "setCode": "EB04",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB04/EB04-001_EN.webp"
+    },
+    {
+      "id": "OP07-019",
+      "name": "Jewelry Bonney",
+      "colors": [
+        "Green"
+      ],
+      "setId": "OP-07",
+      "setName": "500 Years in the Future",
+      "setCode": "OP07",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP07/OP07-019_EN.webp"
+    },
+    {
+      "id": "OP13-100",
+      "name": "Jewelry Bonney",
+      "colors": [
+        "Yellow"
+      ],
+      "setId": "OP-13",
+      "setName": "Carrying On His Will",
+      "setCode": "OP13",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP13/OP13-100_EN.webp"
+    },
+    {
+      "id": "OP11-021",
+      "name": "Jinbe",
+      "colors": [
+        "Green"
+      ],
+      "setId": "OP-11",
+      "setName": "A Fist of Divine Speed",
+      "setCode": "OP11",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP11/OP11-021_EN.webp"
+    },
+    {
+      "id": "OP14-040",
+      "name": "Jinbe",
+      "colors": [
+        "Blue"
+      ],
+      "setId": "OP14-EB04",
+      "setName": "The Azure Sea's Seven",
+      "setCode": "OP14",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP14/OP14-040_EN.webp"
+    },
+    {
+      "id": "OP01-061",
+      "name": "Kaido",
+      "colors": [
+        "Blue",
+        "Purple"
+      ],
+      "setId": "OP-01",
+      "setName": "Romance Dawn",
+      "setCode": "OP01",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-061_EN.webp"
+    },
+    {
+      "id": "OP17-058",
+      "name": "Kaido",
+      "colors": [
+        "Purple"
+      ],
+      "setId": "OP-17",
+      "setName": "The World's Strongest Warriors",
+      "setCode": "OP17",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP17/OP17-058_EN.webp"
+    },
+    {
+      "id": "ST04-001",
+      "name": "Kaido",
+      "colors": [
+        "Purple"
+      ],
+      "setId": "ST-04",
+      "setName": "Starter Deck 4: Animal Kingdom Pirates",
+      "setCode": "ST04",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST04/ST04-001_EN.webp"
+    },
+    {
+      "id": "OP08-098",
+      "name": "Kalgara",
+      "colors": [
+        "Yellow"
+      ],
+      "setId": "OP-08",
+      "setName": "Two Legends",
+      "setCode": "OP08",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP08/OP08-098_EN.webp"
+    },
+    {
+      "id": "OP02-025",
+      "name": "Kin'emon",
+      "colors": [
+        "Green"
+      ],
+      "setId": "OP-02",
+      "setName": "Paramount War",
+      "setCode": "OP02",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP02/OP02-025_EN.webp"
+    },
+    {
+      "id": "OP01-091",
+      "name": "King",
+      "colors": [
+        "Purple"
+      ],
+      "setId": "OP-01",
+      "setName": "Romance Dawn",
+      "setCode": "OP01",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-091_EN.webp"
+    },
+    {
+      "id": "OP08-057",
+      "name": "King",
+      "colors": [
+        "Blue",
+        "Purple"
+      ],
+      "setId": "OP-08",
+      "setName": "Two Legends",
+      "setCode": "OP08",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP08/OP08-057_EN.webp"
+    },
+    {
+      "id": "OP12-081",
+      "name": "Koala",
+      "colors": [
+        "Black",
+        "Yellow"
+      ],
+      "setId": "OP-12",
+      "setName": "Legacy of the Master",
+      "setCode": "OP12",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP12/OP12-081_EN.webp"
+    },
+    {
+      "id": "OP11-001",
+      "name": "Koby",
+      "colors": [
+        "Red",
+        "Black"
+      ],
+      "setId": "OP-11",
+      "setName": "A Fist of Divine Speed",
+      "setCode": "OP11",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP11/OP11-001_EN.webp"
+    },
+    {
+      "id": "EB01-001",
+      "name": "Kouzuki Oden",
+      "colors": [
+        "Green",
+        "Red"
+      ],
+      "setId": "EB-01",
+      "setName": "Extra Booster: Memorial Collection",
+      "setCode": "EB01",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB01/EB01-001_EN.webp"
+    },
+    {
+      "id": "OP01-031",
+      "name": "Kouzuki Oden",
+      "colors": [
+        "Green"
+      ],
+      "setId": "OP-01",
+      "setName": "Romance Dawn",
+      "setCode": "OP01",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-031_EN.webp"
+    },
+    {
+      "id": "OP15-001",
+      "name": "Krieg",
+      "colors": [
+        "Green",
+        "Red"
+      ],
+      "setId": "OP15-EB04",
+      "setName": "Adventure on Kami's Island",
+      "setCode": "OP15",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP15/OP15-001_EN.webp"
+    },
+    {
+      "id": "OP03-021",
+      "name": "Kuro",
+      "colors": [
+        "Green"
+      ],
+      "setId": "OP-03",
+      "setName": "Pillars of Strength",
+      "setCode": "OP03",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP03/OP03-021_EN.webp"
+    },
+    {
+      "id": "OP12-040",
+      "name": "Kuzan",
+      "colors": [
+        "Blue"
+      ],
+      "setId": "OP-12",
+      "setName": "Legacy of the Master",
+      "setCode": "OP12",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP12/OP12-040_EN.webp"
+    },
+    {
+      "id": "EB01-040",
+      "name": "Kyros",
+      "colors": [
+        "Black",
+        "Yellow"
+      ],
+      "setId": "EB-01",
+      "setName": "Extra Booster: Memorial Collection",
+      "setCode": "EB01",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB01/EB01-040_EN.webp"
+    },
+    {
+      "id": "OP09-022",
+      "name": "Lim",
+      "colors": [
+        "Green",
+        "Purple"
+      ],
+      "setId": "OP-09",
+      "setName": "Emperors in the New World",
+      "setCode": "OP09",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP09/OP09-022_EN.webp"
+    },
+    {
+      "id": "OP15-002",
+      "name": "Lucy",
+      "colors": [
+        "Blue",
+        "Red"
+      ],
+      "setId": "OP15-EB04",
+      "setName": "Adventure on Kami's Island",
+      "setCode": "OP15",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP15/OP15-002_EN.webp"
+    },
+    {
+      "id": "ST30-001",
+      "name": "Luffy & Ace",
+      "colors": [
+        "Green",
+        "Red"
+      ],
+      "setId": "ST-30",
+      "setName": "Starter Deck EX: Luffy & Ace",
+      "setCode": "ST30",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST30/ST30-001_EN.webp"
+    },
+    {
+      "id": "OP02-071",
+      "name": "Magellan",
+      "colors": [
+        "Purple"
+      ],
+      "setId": "OP-02",
+      "setName": "Paramount War",
+      "setCode": "OP02",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP02/OP02-071_EN.webp"
+    },
+    {
+      "id": "OP08-002",
+      "name": "Marco",
+      "colors": [
+        "Blue",
+        "Red"
+      ],
+      "setId": "OP-08",
+      "setName": "Two Legends",
+      "setCode": "OP08",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP08/OP08-002_EN.webp"
+    },
+    {
+      "id": "OP09-081",
+      "name": "Marshall D. Teach",
+      "colors": [
+        "Black"
+      ],
+      "setId": "OP-09",
+      "setName": "Emperors in the New World",
+      "setCode": "OP09",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP09/OP09-081_EN.webp"
+    },
+    {
+      "id": "OP16-080",
+      "name": "Marshall D. Teach",
+      "colors": [
+        "Black",
+        "Yellow"
+      ],
+      "setId": "OP-16",
+      "setName": "The Time of Battle",
+      "setCode": "OP16",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP16/OP16-080_EN.webp"
+    },
+    {
+      "id": "OP07-001",
+      "name": "Monkey D. Dragon",
+      "colors": [
+        "Red"
+      ],
+      "setId": "OP-07",
+      "setName": "500 Years in the Future",
+      "setCode": "OP07",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP07/OP07-001_EN.webp"
+    },
+    {
+      "id": "OP02-002",
+      "name": "Monkey D. Garp",
+      "colors": [
+        "Red",
+        "Black"
+      ],
+      "setId": "OP-02",
+      "setName": "Paramount War",
+      "setCode": "OP02",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP02/OP02-002_EN.webp"
+    },
+    {
+      "id": "EB02-010",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Green",
+        "Purple"
+      ],
+      "setId": "EB-02",
+      "setName": "Extra Booster: Anime 25th Collection",
+      "setCode": "EB02",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB02/EB02-010_EN.webp"
+    },
+    {
+      "id": "OP01-003",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Green",
+        "Red"
+      ],
+      "setId": "OP-01",
+      "setName": "Romance Dawn",
+      "setCode": "OP01",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-003_EN.webp"
+    },
+    {
+      "id": "OP05-060",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Purple"
+      ],
+      "setId": "OP-05",
+      "setName": "Awakening of the New Era",
+      "setCode": "OP05",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP05/OP05-060_EN.webp"
+    },
+    {
+      "id": "OP09-061",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Purple",
+        "Black"
+      ],
+      "setId": "OP-09",
+      "setName": "Emperors in the New World",
+      "setCode": "OP09",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP09/OP09-061_EN.webp"
+    },
+    {
+      "id": "OP11-040",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Blue",
+        "Purple"
+      ],
+      "setId": "OP-11",
+      "setName": "A Fist of Divine Speed",
+      "setCode": "OP11",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP11/OP11-040_EN.webp"
+    },
+    {
+      "id": "OP13-001",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Green",
+        "Red"
+      ],
+      "setId": "OP-13",
+      "setName": "Carrying On His Will",
+      "setCode": "OP13",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP13/OP13-001_EN.webp"
+    },
+    {
+      "id": "OP15-098",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Yellow"
+      ],
+      "setId": "OP15-EB04",
+      "setName": "Adventure on Kami's Island",
+      "setCode": "OP15",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP15/OP15-098_EN.webp"
+    },
+    {
+      "id": "OP16-022",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Blue",
+        "Green"
+      ],
+      "setId": "OP-16",
+      "setName": "The Time of Battle",
+      "setCode": "OP16",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP16/OP16-022_EN.webp"
+    },
+    {
+      "id": "OP17-079",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Black"
+      ],
+      "setId": "OP-17",
+      "setName": "The World's Strongest Warriors",
+      "setCode": "OP17",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP17/OP17-079_EN.webp"
+    },
+    {
+      "id": "ST01-001",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Red"
+      ],
+      "setId": "ST-01",
+      "setName": "Starter Deck 1: Straw Hat Crew",
+      "setCode": "ST01",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST01/ST01-001_EN.webp"
+    },
+    {
+      "id": "ST08-001",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Black"
+      ],
+      "setId": "ST-08",
+      "setName": "Starter Deck 8: Monkey.D.Luffy",
+      "setCode": "ST08",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST08/ST08-001_EN.webp"
+    },
+    {
+      "id": "ST10-002",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Purple",
+        "Red"
+      ],
+      "setId": "ST-10",
+      "setName": "Ultra Deck: The Three Captains",
+      "setCode": "ST10",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST10/ST10-002_EN.webp"
+    },
+    {
+      "id": "ST13-003",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Yellow"
+      ],
+      "setId": "ST-13",
+      "setName": "Ultra Deck: The Three Brothers",
+      "setCode": "ST13",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST13/ST13-003_EN.webp"
+    },
+    {
+      "id": "ST14-001",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Black"
+      ],
+      "setId": "ST-14",
+      "setName": "Starter Deck 14: 3D2Y",
+      "setCode": "ST14",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST14/ST14-001_EN.webp"
+    },
+    {
+      "id": "ST21-001",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Red"
+      ],
+      "setId": "ST-21",
+      "setName": "Starter Deck EX: Gear 5",
+      "setCode": "ST21",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST21/ST21-001_EN.webp"
+    },
+    {
+      "id": "ST29-001",
+      "name": "Monkey D. Luffy",
+      "colors": [
+        "Yellow"
+      ],
+      "setId": "ST-29",
+      "setName": "Starter Deck 29: Egghead",
+      "setCode": "ST29",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST29/ST29-001_EN.webp"
+    },
+    {
+      "id": "OP03-040",
+      "name": "Nami",
+      "colors": [
+        "Blue"
+      ],
+      "setId": "OP-03",
+      "setName": "Pillars of Strength",
+      "setCode": "OP03",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP03/OP03-040_EN.webp"
+    },
+    {
+      "id": "OP11-041",
+      "name": "Nami",
+      "colors": [
+        "Blue",
+        "Yellow"
+      ],
+      "setId": "OP-11",
+      "setName": "A Fist of Divine Speed",
+      "setCode": "OP11",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP11/OP11-041_EN.webp"
+    },
+    {
+      "id": "EB03-001",
+      "name": "Nefeltari Vivi",
+      "colors": [
+        "Blue",
+        "Red"
+      ],
+      "setId": "EB-03",
+      "setName": "Extra Booster: One Piece Heroines Edition",
+      "setCode": "EB03",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-001_EN.webp"
+    },
+    {
+      "id": "OP04-001",
+      "name": "Nefeltari Vivi",
+      "colors": [
+        "Blue",
+        "Red"
+      ],
+      "setId": "OP-04",
+      "setName": "Kingdoms of Intrigue",
+      "setCode": "OP04",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP04/OP04-001_EN.webp"
+    },
+    {
+      "id": "OP09-062",
+      "name": "Nico Robin",
+      "colors": [
+        "Purple",
+        "Yellow"
+      ],
+      "setId": "OP-09",
+      "setName": "Emperors in the New World",
+      "setCode": "OP09",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP09/OP09-062_EN.webp"
+    },
+    {
+      "id": "OP06-021",
+      "name": "Perona",
+      "colors": [
+        "Green",
+        "Black"
+      ],
+      "setId": "OP-06",
+      "setName": "Wings of the Captain",
+      "setCode": "OP06",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP06/OP06-021_EN.webp"
+    },
+    {
+      "id": "OP03-001",
+      "name": "Portgas D. Ace",
+      "colors": [
+        "Red"
+      ],
+      "setId": "OP-03",
+      "setName": "Pillars of Strength",
+      "setCode": "OP03",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP03/OP03-001_EN.webp"
+    },
+    {
+      "id": "OP13-002",
+      "name": "Portgas D. Ace",
+      "colors": [
+        "Blue",
+        "Red"
+      ],
+      "setId": "OP-13",
+      "setName": "Carrying On His Will",
+      "setCode": "OP13",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP13/OP13-002_EN.webp"
+    },
+    {
+      "id": "OP16-001",
+      "name": "Portgas D. Ace",
+      "colors": [
+        "Red"
+      ],
+      "setId": "OP-16",
+      "setName": "The Time of Battle",
+      "setCode": "OP16",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP16/OP16-001_EN.webp"
+    },
+    {
+      "id": "ST13-002",
+      "name": "Portgas D. Ace",
+      "colors": [
+        "Blue",
+        "Yellow"
+      ],
+      "setId": "ST-13",
+      "setName": "Ultra Deck: The Three Brothers",
+      "setCode": "ST13",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST13/ST13-002_EN.webp"
+    },
+    {
+      "id": "OP04-040",
+      "name": "Queen",
+      "colors": [
+        "Blue",
+        "Yellow"
+      ],
+      "setId": "OP-04",
+      "setName": "Kingdoms of Intrigue",
+      "setCode": "OP04",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP04/OP04-040_EN.webp"
+    },
+    {
+      "id": "OP04-039",
+      "name": "Rebecca",
+      "colors": [
+        "Blue",
+        "Black"
+      ],
+      "setId": "OP-04",
+      "setName": "Kingdoms of Intrigue",
+      "setCode": "OP04",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP04/OP04-039_EN.webp"
+    },
+    {
+      "id": "OP15-039",
+      "name": "Rebecca",
+      "colors": [
+        "Blue"
+      ],
+      "setId": "OP15-EB04",
+      "setName": "Adventure on Kami's Island",
+      "setCode": "OP15",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP15/OP15-039_EN.webp"
+    },
+    {
+      "id": "OP03-076",
+      "name": "Rob Lucci",
+      "colors": [
+        "Black"
+      ],
+      "setId": "OP-03",
+      "setName": "Pillars of Strength",
+      "setCode": "OP03",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP03/OP03-076_EN.webp"
+    },
+    {
+      "id": "OP07-079",
+      "name": "Rob Lucci",
+      "colors": [
+        "Black"
+      ],
+      "setId": "OP-07",
+      "setName": "500 Years in the Future",
+      "setCode": "OP07",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP07/OP07-079_EN.webp"
+    },
+    {
+      "id": "OP17-039",
+      "name": "Rocks D. Xebec",
+      "colors": [
+        "Blue"
+      ],
+      "setId": "OP-17",
+      "setName": "The World's Strongest Warriors",
+      "setCode": "OP17",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP17/OP17-039_EN.webp"
+    },
+    {
+      "id": "OP01-001",
+      "name": "Roronoa Zoro",
+      "colors": [
+        "Red"
+      ],
+      "setId": "OP-01",
+      "setName": "Romance Dawn",
+      "setCode": "OP01",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-001_EN.webp"
+    },
+    {
+      "id": "OP12-020",
+      "name": "Roronoa Zoro",
+      "colors": [
+        "Green"
+      ],
+      "setId": "OP-12",
+      "setName": "Legacy of the Master",
+      "setCode": "OP12",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP12/OP12-020_EN.webp"
+    },
+    {
+      "id": "ST12-001",
+      "name": "Roronoa Zoro & Sanji",
+      "colors": [
+        "Blue",
+        "Green"
+      ],
+      "setId": "ST-12",
+      "setName": "Starter Deck 12: Zoro and Sanji",
+      "setCode": "ST12",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST12/ST12-001_EN.webp"
+    },
+    {
+      "id": "OP05-001",
+      "name": "Sabo",
+      "colors": [
+        "Red",
+        "Black"
+      ],
+      "setId": "OP-05",
+      "setName": "Awakening of the New Era",
+      "setCode": "OP05",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP05/OP05-001_EN.webp"
+    },
+    {
+      "id": "OP13-004",
+      "name": "Sabo",
+      "colors": [
+        "Red",
+        "Black"
+      ],
+      "setId": "OP-13",
+      "setName": "Carrying On His Will",
+      "setCode": "OP13",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP13/OP13-004_EN.webp"
+    },
+    {
+      "id": "ST13-001",
+      "name": "Sabo",
+      "colors": [
+        "Red",
+        "Yellow"
+      ],
+      "setId": "ST-13",
+      "setName": "Ultra Deck: The Three Brothers",
+      "setCode": "ST13",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST13/ST13-001_EN.webp"
+    },
+    {
+      "id": "OP05-041",
+      "name": "Sakazuki",
+      "colors": [
+        "Blue",
+        "Black"
+      ],
+      "setId": "OP-05",
+      "setName": "Awakening of the New Era",
+      "setCode": "OP05",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP05/OP05-041_EN.webp"
+    },
+    {
+      "id": "ST06-001",
+      "name": "Sakazuki",
+      "colors": [
+        "Black"
+      ],
+      "setId": "ST-06",
+      "setName": "Starter Deck 6: Absolute Justice",
+      "setCode": "ST06",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST06/ST06-001_EN.webp"
+    },
+    {
+      "id": "OP02-026",
+      "name": "Sanji",
+      "colors": [
+        "Blue",
+        "Green"
+      ],
+      "setId": "OP-02",
+      "setName": "Paramount War",
+      "setCode": "OP02",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP02/OP02-026_EN.webp"
+    },
+    {
+      "id": "OP12-041",
+      "name": "Sanji",
+      "colors": [
+        "Blue",
+        "Purple"
+      ],
+      "setId": "OP-12",
+      "setName": "Legacy of the Master",
+      "setCode": "OP12",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP12/OP12-041_EN.webp"
+    },
+    {
+      "id": "PRB01-001",
+      "name": "Sanji",
+      "colors": [
+        "Red"
+      ],
+      "setId": "PRB-01",
+      "setName": "Premium Booster -The Best-",
+      "setCode": "PRB01",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/PRB01/PRB01-001_EN.webp"
+    },
+    {
+      "id": "OP16-060",
+      "name": "Sengoku",
+      "colors": [
+        "Purple"
+      ],
+      "setId": "OP-16",
+      "setName": "The Time of Battle",
+      "setCode": "OP16",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP16/OP16-060_EN.webp"
+    },
+    {
+      "id": "OP09-001",
+      "name": "Shanks",
+      "colors": [
+        "Red"
+      ],
+      "setId": "OP-09",
+      "setName": "Emperors in the New World",
+      "setCode": "OP09",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP09/OP09-001_EN.webp"
+    },
+    {
+      "id": "OP17-020",
+      "name": "Shanks",
+      "colors": [
+        "Green"
+      ],
+      "setId": "OP-17",
+      "setName": "The World's Strongest Warriors",
+      "setCode": "OP17",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP17/OP17-020_EN.webp"
+    },
+    {
+      "id": "ST05-001",
+      "name": "Shanks",
+      "colors": [
+        "Purple"
+      ],
+      "setId": "ST-05",
+      "setName": "Starter Deck 5: Film Edition",
+      "setCode": "ST05",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST05/ST05-001_EN.webp"
+    },
+    {
+      "id": "OP11-022",
+      "name": "Shirahoshi",
+      "colors": [
+        "Green",
+        "Yellow"
+      ],
+      "setId": "OP-11",
+      "setName": "A Fist of Divine Speed",
+      "setCode": "OP11",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP11/OP11-022_EN.webp"
+    },
+    {
+      "id": "OP12-001",
+      "name": "Silvers Rayleigh",
+      "colors": [
+        "Red"
+      ],
+      "setId": "OP-12",
+      "setName": "Legacy of the Master",
+      "setCode": "OP12",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP12/OP12-001_EN.webp"
+    },
+    {
+      "id": "OP02-093",
+      "name": "Smoker",
+      "colors": [
+        "Black"
+      ],
+      "setId": "OP-02",
+      "setName": "Paramount War",
+      "setCode": "OP02",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP02/OP02-093_EN.webp"
+    },
+    {
+      "id": "OP10-001",
+      "name": "Smoker",
+      "colors": [
+        "Green",
+        "Red"
+      ],
+      "setId": "OP-10",
+      "setName": "Royal Blood",
+      "setCode": "OP10",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP10/OP10-001_EN.webp"
+    },
+    {
+      "id": "OP10-003",
+      "name": "Sugar",
+      "colors": [
+        "Purple",
+        "Red"
+      ],
+      "setId": "OP-10",
+      "setName": "Royal Blood",
+      "setCode": "OP10",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP10/OP10-003_EN.webp"
+    },
+    {
+      "id": "OP08-001",
+      "name": "Tony Tony Chopper",
+      "colors": [
+        "Green",
+        "Red"
+      ],
+      "setId": "OP-08",
+      "setName": "Two Legends",
+      "setCode": "OP08",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP08/OP08-001_EN.webp"
+    },
+    {
+      "id": "OP01-002",
+      "name": "Trafalgar Law",
+      "colors": [
+        "Green",
+        "Red"
+      ],
+      "setId": "OP-01",
+      "setName": "Romance Dawn",
+      "setCode": "OP01",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-002_EN.webp"
+    },
+    {
+      "id": "OP10-022",
+      "name": "Trafalgar Law",
+      "colors": [
+        "Green",
+        "Yellow"
+      ],
+      "setId": "OP-10",
+      "setName": "Royal Blood",
+      "setCode": "OP10",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP10/OP10-022_EN.webp"
+    },
+    {
+      "id": "OP14-001",
+      "name": "Trafalgar Law",
+      "colors": [
+        "Red"
+      ],
+      "setId": "OP14-EB04",
+      "setName": "The Azure Sea's Seven",
+      "setCode": "OP14",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP14/OP14-001_EN.webp"
+    },
+    {
+      "id": "ST10-001",
+      "name": "Trafalgar Law",
+      "colors": [
+        "Purple",
+        "Red"
+      ],
+      "setId": "ST-10",
+      "setName": "Ultra Deck: The Three Captains",
+      "setCode": "ST10",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST10/ST10-001_EN.webp"
+    },
+    {
+      "id": "OP10-042",
+      "name": "Usopp",
+      "colors": [
+        "Blue",
+        "Black"
+      ],
+      "setId": "OP-10",
+      "setName": "Royal Blood",
+      "setCode": "OP10",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP10/OP10-042_EN.webp"
+    },
+    {
+      "id": "OP06-001",
+      "name": "Uta",
+      "colors": [
+        "Purple",
+        "Red"
+      ],
+      "setId": "OP-06",
+      "setName": "Wings of the Captain",
+      "setCode": "OP06",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP06/OP06-001_EN.webp"
+    },
+    {
+      "id": "ST11-001",
+      "name": "Uta",
+      "colors": [
+        "Green"
+      ],
+      "setId": "ST-11",
+      "setName": "Starter Deck 11: Uta",
+      "setCode": "ST11",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST11/ST11-001_EN.webp"
+    },
+    {
+      "id": "OP07-097",
+      "name": "Vegapunk",
+      "colors": [
+        "Yellow"
+      ],
+      "setId": "OP-07",
+      "setName": "500 Years in the Future",
+      "setCode": "OP07",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP07/OP07-097_EN.webp"
+    },
+    {
+      "id": "OP06-042",
+      "name": "Vinsmoke Reiju",
+      "colors": [
+        "Blue",
+        "Purple"
+      ],
+      "setId": "OP-06",
+      "setName": "Wings of the Captain",
+      "setCode": "OP06",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP06/OP06-042_EN.webp"
+    },
+    {
+      "id": "OP06-022",
+      "name": "Yamato",
+      "colors": [
+        "Green",
+        "Yellow"
+      ],
+      "setId": "OP-06",
+      "setName": "Wings of the Captain",
+      "setCode": "OP06",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP06/OP06-022_EN.webp"
+    },
+    {
+      "id": "OP16-079",
+      "name": "Yamato",
+      "colors": [
+        "Black"
+      ],
+      "setId": "OP-16",
+      "setName": "The Time of Battle",
+      "setCode": "OP16",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP16/OP16-079_EN.webp"
+    },
+    {
+      "id": "ST09-001",
+      "name": "Yamato",
+      "colors": [
+        "Yellow"
+      ],
+      "setId": "ST-09",
+      "setName": "Starter Deck 9: Yamato",
+      "setCode": "ST09",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/ST09/ST09-001_EN.webp"
+    },
+    {
+      "id": "OP02-072",
+      "name": "Zephyr",
+      "colors": [
+        "Purple",
+        "Black"
+      ],
+      "setId": "OP-02",
+      "setName": "Paramount War",
+      "setCode": "OP02",
+      "imageUrl": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP02/OP02-072_EN.webp"
+    }
+  ]
+}

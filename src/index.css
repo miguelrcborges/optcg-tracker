@@ -1,0 +1,248 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource/pirata-one';
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: 'Pirata One', 'Trebuchet MS', Georgia, serif;
+
+  --color-ink-950: #060a11;
+  --color-ink-900: #080d16;
+  --color-ink-850: #0b1320;
+  --color-ink-800: #101a2b;
+  --color-ink-700: #1a2740;
+  --color-ink-600: #2a3a57;
+
+  --color-mist-100: #eef2f8;
+  --color-mist-200: #dbe2ee;
+  --color-mist-300: #b9c4d6;
+  --color-mist-400: #98a5bb;
+  --color-mist-500: #7e8ba3;
+  --color-mist-600: #63708a;
+
+  --color-gold-200: #f8e4b8;
+  --color-gold-300: #f4d58d;
+  --color-gold-400: #e7b75f;
+  --color-gold-500: #c99a47;
+  --color-gold-600: #a97a2c;
+
+  --color-crimson-100: #f6dada;
+  --color-crimson-200: #efb8b8;
+  --color-crimson-300: #e58f8f;
+  --color-crimson-400: #d95d5d;
+  --color-crimson-500: #c84545;
+  --color-crimson-600: #a52f2f;
+  --color-crimson-700: #7f2020;
+  --color-crimson-950: #2a0e0e;
+
+  --color-emerald-100: #d8f3e4;
+  --color-emerald-200: #b0e6ca;
+  --color-emerald-300: #84d4ae;
+  --color-emerald-400: #58b98a;
+  --color-emerald-500: #3d966c;
+  --color-emerald-600: #2e7554;
+  --color-emerald-950: #0c241b;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    background-color: var(--color-ink-950);
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    min-height: 100dvh;
+    margin: 0;
+    background-color: var(--color-ink-950);
+    background-image:
+      radial-gradient(65% 45% at 50% -12%, rgba(200, 69, 69, 0.14), transparent 68%),
+      radial-gradient(35% 35% at 100% 6%, rgba(231, 183, 95, 0.07), transparent 70%),
+      radial-gradient(40% 35% at 0% 50%, rgba(79, 143, 216, 0.05), transparent 70%),
+      linear-gradient(180deg, #070c15 0%, #080d16 42%, #060a11 100%);
+    background-attachment: fixed;
+    color: var(--color-mist-100);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0.015em;
+  }
+
+  ::selection {
+    background: rgba(231, 183, 95, 0.35);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold-400);
+    outline-offset: 2px;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font: inherit;
+  }
+
+  /* Keep iOS from zooming on focus. */
+  @supports (-webkit-touch-callout: none) {
+    input,
+    select,
+    textarea {
+      font-size: 16px;
+    }
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-2xl border border-white/[0.07] bg-ink-900/75 shadow-[0_18px_50px_-28px_rgba(0,0,0,0.95)] backdrop-blur-sm;
+  }
+
+  .panel-raised {
+    @apply rounded-2xl border border-white/[0.09] bg-ink-850/90 shadow-[0_24px_70px_-32px_rgba(0,0,0,1)] backdrop-blur-md;
+  }
+
+  .label {
+    @apply mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.14em] text-mist-500;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-white/10 bg-ink-850/80 px-3.5 py-2.5 text-[15px] text-mist-100 outline-none transition placeholder:text-mist-600 hover:border-white/15 focus:border-gold-400/60 focus:ring-2 focus:ring-gold-400/15;
+  }
+
+  .field-sm {
+    @apply w-full rounded-lg border border-white/10 bg-ink-850/80 px-3 py-2 text-sm text-mist-100 outline-none transition placeholder:text-mist-600 hover:border-white/15 focus:border-gold-400/60 focus:ring-2 focus:ring-gold-400/15;
+  }
+
+  .btn,
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost,
+  .btn-danger {
+    @apply inline-flex select-none items-center justify-center gap-2 rounded-xl text-sm font-semibold transition active:scale-[0.98] disabled:pointer-events-none disabled:opacity-45;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-b from-gold-300 to-gold-500 px-4 py-2.5 text-ink-950 shadow-lg shadow-gold-500/10 hover:from-gold-200 hover:to-gold-400;
+  }
+
+  .btn-secondary {
+    @apply border border-white/10 bg-white/[0.055] px-4 py-2.5 text-mist-100 hover:border-white/20 hover:bg-white/[0.09];
+  }
+
+  .btn-ghost {
+    @apply px-3 py-2 text-mist-300 hover:bg-white/[0.06] hover:text-mist-100;
+  }
+
+  .btn-danger {
+    @apply border border-crimson-400/30 bg-crimson-500/10 px-4 py-2.5 text-crimson-200 hover:bg-crimson-500/20;
+  }
+
+  .icon-btn {
+    @apply inline-flex size-9 shrink-0 items-center justify-center rounded-lg border border-transparent text-mist-400 transition hover:border-white/10 hover:bg-white/[0.06] hover:text-mist-100;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[11px] font-medium text-mist-400;
+  }
+
+  .section-title {
+    @apply text-[11px] font-semibold uppercase tracking-[0.18em] text-mist-500;
+  }
+
+  .stat-value {
+    @apply font-display text-3xl leading-none text-mist-100;
+  }
+
+  .stat-label {
+    @apply mt-1.5 text-[11px] font-semibold uppercase tracking-[0.13em] text-mist-500;
+  }
+}
+
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sheet-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-toast-in {
+  animation: toast-in 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-rise-in {
+  animation: rise-in 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-sheet-in {
+  animation: sheet-in 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+dist/
+dev-dist/
+shots/
+coverage/
+*.local
+.env
+.env.*
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+*.tsbuildinfo
