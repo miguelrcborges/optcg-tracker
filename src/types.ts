@@ -41,12 +41,14 @@ export interface Match {
   id: string;
   tournamentId: string;
   round: number;
-  opponentLeaderId: string;
+  opponentLeaderId?: string;
   opponentName?: string;
-  diceWinner: PlayerSide;
-  firstPlayer: PlayerSide;
+  diceWinner?: PlayerSide;
+  firstPlayer?: PlayerSide;
   myGameWins: number;
   opponentGameWins: number;
+  /** A bye counts as a win without an opponent, dice roll, or game score. */
+  isBye?: boolean;
   notes?: string;
   createdAt: string;
   updatedAt: string;

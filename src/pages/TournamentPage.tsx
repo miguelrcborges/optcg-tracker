@@ -238,7 +238,10 @@ export function TournamentPage() {
         ) : (
           <div className="space-y-2">
             {matches.map((match) => {
-              const opponent = leaderMap.get(match.opponentLeaderId);
+              const isBye = Boolean(match.isBye);
+              const opponent = match.opponentLeaderId
+                ? leaderMap.get(match.opponentLeaderId)
+                : undefined;
               const result = getMatchResult(match);
               return (
                 <div
@@ -258,34 +261,46 @@ export function TournamentPage() {
                     to={`/tournaments/${tournament.id}/matches/${match.id}/edit`}
                     className="flex min-w-0 flex-1 items-center gap-3"
                   >
-                    <LeaderImage
-                      leader={opponent}
-                      className="h-16 w-11 shrink-0 rounded-lg shadow-md shadow-black/30"
-                      alt=""
-                    />
+                    {isBye ? (
+                      <div className="flex h-16 w-11 shrink-0 items-center justify-center rounded-lg border border-dashed border-gold-400/30 bg-gold-400/[0.06] text-gold-300/80">
+                        <Flag className="size-4" />
+                      </div>
+                    ) : (
+                      <LeaderImage
+                        leader={opponent}
+                        className="h-16 w-11 shrink-0 rounded-lg shadow-md shadow-black/30"
+                        alt=""
+                      />
+                    )}
                     <div className="min-w-0 flex-1">
                       <div className="flex flex-wrap items-center gap-2">
                         <span className="truncate text-sm font-semibold text-mist-100">
-                          {opponent?.name ?? 'Unknown leader'}
+                          {isBye ? 'Bye' : opponent?.name ?? 'Unknown leader'}
                         </span>
                         <ResultBadge result={result} size="sm" />
                       </div>
-                      {match.opponentName ? (
+                      {isBye ? (
+                        <p className="mt-0.5 truncate text-[11px] text-mist-500">
+                          No opponent this round
+                        </p>
+                      ) : match.opponentName ? (
                         <p className="mt-0.5 truncate text-[11px] text-mist-500">
                           vs {match.opponentName}
                         </p>
                       ) : null}
 
-                      <div className="mt-1.5 flex flex-wrap gap-1.5">
-                        <span className="chip">
-                          <Dices className="size-3" />
-                          Dice: {match.diceWinner === 'me' ? 'You' : 'Opponent'}
-                        </span>
-                        <span className="chip">
-                          <Flag className="size-3" />
-                          First: {match.firstPlayer === 'me' ? 'You' : 'Opponent'}
-                        </span>
-                      </div>
+                      {!isBye ? (
+                        <div className="mt-1.5 flex flex-wrap gap-1.5">
+                          <span className="chip">
+                            <Dices className="size-3" />
+                            Dice: {match.diceWinner === 'me' ? 'You' : 'Opponent'}
+                          </span>
+                          <span className="chip">
+                            <Flag className="size-3" />
+                            First: {match.firstPlayer === 'me' ? 'You' : 'Opponent'}
+                          </span>
+                        </div>
+                      ) : null}
 
                       {match.notes ? (
                         <p className="mt-1.5 line-clamp-2 text-[11px] leading-relaxed text-mist-500">
@@ -296,10 +311,12 @@ export function TournamentPage() {
 
                     <div className="shrink-0 text-right">
                       <div className="font-display text-2xl leading-none text-mist-100 tabular-nums">
-                        {match.myGameWins}–{match.opponentGameWins}
+                        {isBye
+                          ? '—'
+                          : `${match.myGameWins}–${match.opponentGameWins}`}
                       </div>
                       <div className="mt-1 text-[8px] font-bold uppercase tracking-[0.14em] text-mist-600">
-                        Games
+                        {isBye ? 'Bye win' : 'Games'}
                       </div>
                       <ChevronRight className="ml-auto mt-1 size-3.5 text-mist-600 transition group-hover:translate-x-0.5 group-hover:text-mist-300" />
                     </div>
@@ -325,10 +342,14 @@ export function TournamentPage() {
         title="Delete this round?"
         description={
           matchToDelete
-            ? `Round ${matchToDelete.round} against ${
-                leaderMap.get(matchToDelete.opponentLeaderId)?.name ??
-                'that leader'
-              } will be removed from the ledger.`
+            ? matchToDelete.isBye
+              ? `Round ${matchToDelete.round} bye will be removed from the ledger.`
+              : `Round ${matchToDelete.round} against ${
+                  matchToDelete.opponentLeaderId
+                    ? leaderMap.get(matchToDelete.opponentLeaderId)?.name ??
+                      'that leader'
+                    : 'that leader'
+                } will be removed from the ledger.`
             : ''
         }
         confirmLabel="Delete round"

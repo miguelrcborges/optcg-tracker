@@ -220,6 +220,28 @@ console.log(
   (await page.locator('main').innerText()).includes('Imu Test Leader'),
 );
 
+// Log a bye round from the event page.
+await page.getByRole('link', { name: /Back to event/i }).click();
+await page.waitForURL(/tournaments\/t1$/);
+await settle(200);
+await page.getByRole('link', { name: /Add (match|round)/i }).first().click();
+await page.waitForURL(/matches\/new/);
+await settle(200);
+await page.getByRole('button', { name: /Bye win/i }).click();
+console.log(
+  'bye mode:',
+  (await page.getByRole('button', { name: /Choose a leader/i }).count()) === 0,
+);
+await page.screenshot({ path: `${OUT}/09b-bye-form.png` });
+await page.getByRole('button', { name: /Save round/i }).click();
+await page.waitForURL(/tournaments\/t1/);
+await settle();
+console.log(
+  'bye shown in rounds:',
+  (await page.locator('main').innerText()).includes('No opponent this round'),
+);
+await page.screenshot({ path: `${OUT}/09c-event-with-bye.png`, fullPage: true });
+
 await page.goto(`${BASE}#/stats`);
 await settle();
 await page.screenshot({ path: `${OUT}/10-stats-viewport.png` });

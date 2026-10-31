@@ -33,12 +33,13 @@ export interface TournamentInput {
 export interface MatchInput {
   tournamentId: string;
   round: number;
-  opponentLeaderId: string;
+  opponentLeaderId?: string;
   opponentName?: string;
-  diceWinner: PlayerSide;
-  firstPlayer: PlayerSide;
+  diceWinner?: PlayerSide;
+  firstPlayer?: PlayerSide;
   myGameWins: number;
   opponentGameWins: number;
+  isBye?: boolean;
   notes?: string;
 }
 
@@ -167,6 +168,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       firstPlayer: input.firstPlayer,
       myGameWins: input.myGameWins,
       opponentGameWins: input.opponentGameWins,
+      isBye: input.isBye,
       notes: cleanOptional(input.notes),
       createdAt: timestamp,
       updatedAt: timestamp,
@@ -193,6 +195,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
               firstPlayer: input.firstPlayer,
               myGameWins: input.myGameWins,
               opponentGameWins: input.opponentGameWins,
+              isBye: input.isBye,
               notes: cleanOptional(input.notes),
               updatedAt: nowISO(),
             }

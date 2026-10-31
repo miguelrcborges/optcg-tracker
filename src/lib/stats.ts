@@ -25,8 +25,9 @@ export function emptyRecord(): MatchRecord {
 }
 
 export function getMatchResult(
-  match: Pick<Match, 'myGameWins' | 'opponentGameWins'>,
+  match: Pick<Match, 'myGameWins' | 'opponentGameWins' | 'isBye'>,
 ): MatchResult {
+  if (match.isBye) return 'win';
   if (match.myGameWins > match.opponentGameWins) return 'win';
   if (match.myGameWins < match.opponentGameWins) return 'loss';
   return 'draw';
@@ -42,8 +43,10 @@ export function summarize(matches: Match[]): MatchRecord {
 
   for (const match of matches) {
     record.matches += 1;
-    record.gamesWon += match.myGameWins;
-    record.gamesLost += match.opponentGameWins;
+    if (!match.isBye) {
+      record.gamesWon += match.myGameWins;
+      record.gamesLost += match.opponentGameWins;
+    }
 
     switch (getMatchResult(match)) {
       case 'win':

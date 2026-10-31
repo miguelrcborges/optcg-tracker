@@ -130,6 +130,23 @@ await addMatch({
 });
 await shot('07-event-three-matches-mobile', true);
 
+// Log a bye: no opponent, dice, or score needed.
+await page.getByRole('link', { name: /Add (match|round)|Add first match/i }).first().click();
+await page.waitForURL(/matches\/new/);
+await settle(page, 400);
+await page.getByRole('button', { name: /Bye win/i }).click();
+console.log(
+  'bye hides match fields:',
+  (await page.getByLabel('Opponent name').count()) === 0 &&
+    (await page.getByRole('button', { name: /Choose a leader/i }).count()) === 0,
+);
+await page.getByRole('button', { name: /Save round/i }).click();
+await page.waitForURL(/tournaments\/[0-9a-f-]+$/);
+await settle();
+const byeText = await page.locator('main').innerText();
+console.log('bye logged:', byeText.includes('Bye') && byeText.includes('4 rounds'));
+await shot('07b-event-with-bye-mobile', true);
+
 const eventText = await page.locator('main').innerText();
 console.log('event summary snippet:', eventText.slice(0, 400));
 
@@ -137,12 +154,12 @@ await page.getByRole('link', { name: 'Stats', exact: true }).click();
 await page.waitForURL(/stats/);
 await shot('08-stats-mobile', true);
 const statsText = await page.locator('main').innerText();
-console.log('stats has 67%:', statsText.includes('67%'));
+console.log('stats has 75%:', statsText.includes('75%'));
 
 await page.reload({ waitUntil: 'networkidle' });
 await settle();
 const reloadedText = await page.locator('main').innerText();
-console.log('persisted after reload:', reloadedText.includes('67%'));
+console.log('persisted after reload:', reloadedText.includes('75%'));
 
 await page.getByRole('link', { name: 'Data', exact: true }).click();
 await page.waitForURL(/data/);
@@ -171,7 +188,7 @@ await page.locator('input[type=file]').setInputFiles({
 await page.getByRole('dialog').getByRole('button', { name: /Replace & import/i }).click();
 await settle();
 const restoredText = await page.locator('main').innerText();
-console.log('restored rounds:', restoredText.includes('3\nROUNDS'));
+console.log('restored rounds:', restoredText.includes('4\nROUNDS'));
 
 await page.getByRole('link', { name: 'Tournaments', exact: true }).click();
 await page.waitForURL(/#\/$|#\/$/);

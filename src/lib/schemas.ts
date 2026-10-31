@@ -26,20 +26,47 @@ export const tournamentSchema = z.object({
   updatedAt: z.string().min(1),
 });
 
-export const matchSchema = z.object({
-  id: z.string().min(1),
-  tournamentId: z.string().min(1),
-  round: z.number().int().min(1).max(999),
-  opponentLeaderId: z.string().min(1),
-  opponentName: z.string().optional(),
-  diceWinner: z.enum(PLAYER_SIDES),
-  firstPlayer: z.enum(PLAYER_SIDES),
-  myGameWins: z.number().int().min(0).max(99),
-  opponentGameWins: z.number().int().min(0).max(99),
-  notes: z.string().optional(),
-  createdAt: z.string().min(1),
-  updatedAt: z.string().min(1),
-});
+export const matchSchema = z
+  .object({
+    id: z.string().min(1),
+    tournamentId: z.string().min(1),
+    round: z.number().int().min(1).max(999),
+    opponentLeaderId: z.string().min(1).optional(),
+    opponentName: z.string().optional(),
+    diceWinner: z.enum(PLAYER_SIDES).optional(),
+    firstPlayer: z.enum(PLAYER_SIDES).optional(),
+    myGameWins: z.number().int().min(0).max(99),
+    opponentGameWins: z.number().int().min(0).max(99),
+    isBye: z.boolean().optional(),
+    notes: z.string().optional(),
+    createdAt: z.string().min(1),
+    updatedAt: z.string().min(1),
+  })
+  .superRefine((match, context) => {
+    if (match.isBye) return;
+
+    if (!match.opponentLeaderId) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['opponentLeaderId'],
+        message: 'Choose your opponent’s leader.',
+      });
+    }
+    if (!match.diceWinner) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['diceWinner'],
+        message: 'Who won the dice roll?',
+      });
+    }
+    if (!match.firstPlayer) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['firstPlayer'],
+        message: 'Who played first?',
+      });
+    }
+  });
 
 export const appDataSchema = z.object({
   version: z.literal(1),

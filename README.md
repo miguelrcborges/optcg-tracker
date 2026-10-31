@@ -7,7 +7,7 @@ Built as an installable PWA with a mobile-first UI. No account, no server, no sy
 ## Features
 
 - **Tournaments** — name, date, format, location, notes, and the leader you registered.
-- **Rounds** — opponent leader, optional opponent name, round number, who won the dice, who played first, game score (2–1, 2–0, draws), and notes.
+- **Rounds** — opponent leader, optional opponent name, round number, who won the dice, who played first, game score (2–1, 2–0, draws), and notes. A **bye win** toggle logs a round with no opponent, dice, or game score; it counts as a match win and adds no games.
 - **Full leader search** — 144 bundled leaders (every OP/ST/EB leader in the public card data, plus promo leaders), searchable by name, set code, or colour, with colour filters and recently used leaders. Missing something? Add a custom leader.
 - **Stats** — match and game win rates, matchup breakdown by opposing leader, results by your leader, and dice/turn-order splits. Filter by period and by your leader.
 - **Backups** — export everything to JSON, import it back with a preview, or clear the ledger.

@@ -140,9 +140,12 @@ export function StatsPage() {
 
   const byOpponent = useMemo(
     () =>
-      [...groupSummary(filteredMatches, (match) => match.opponentLeaderId).entries()].sort(
-        (a, b) => b[1].matches - a[1].matches,
-      ),
+      [
+        ...groupSummary(
+          filteredMatches.filter((match) => !match.isBye && match.opponentLeaderId),
+          (match) => match.opponentLeaderId as string,
+        ).entries(),
+      ].sort((a, b) => b[1].matches - a[1].matches),
     [filteredMatches],
   );
 

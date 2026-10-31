@@ -79,7 +79,9 @@ export function collectRecentLeaderIds(
 
   [...matches]
     .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
-    .forEach((match) => add(match.opponentLeaderId));
+    .forEach((match) => {
+      if (match.opponentLeaderId) add(match.opponentLeaderId);
+    });
 
   return ids;
 }

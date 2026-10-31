@@ -130,6 +130,7 @@ export function MatchFormPage() {
     existing?.opponentGameWins ?? 0,
   );
   const [notes, setNotes] = useState(existing?.notes ?? '');
+  const [isBye, setIsBye] = useState(existing?.isBye ?? false);
   const [errors, setErrors] = useState<{
     round?: string;
     opponent?: string;
@@ -169,7 +170,9 @@ export function MatchFormPage() {
     ? leaderMap.get(opponentLeaderId)
     : null;
   const yourLeader = leaderMap.get(tournament.leaderId);
-  const previewResult = getMatchResult({ myGameWins, opponentGameWins });
+  const previewResult = isBye
+    ? 'win'
+    : getMatchResult({ myGameWins, opponentGameWins });
 
   function handleDiceChange(value: PlayerSide) {
     setDiceWinner(value);
@@ -195,6 +198,7 @@ export function MatchFormPage() {
     setMyGameWins(0);
     setOpponentGameWins(0);
     setNotes('');
+    setIsBye(false);
     setErrors({});
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -210,39 +214,48 @@ export function MatchFormPage() {
     } else if (tournamentMatches.some((match) => match.round === round)) {
       nextErrors.round = `Round ${round} is already logged.`;
     }
-    if (!opponentLeaderId) {
-      nextErrors.opponent = 'Choose your opponent’s leader.';
-    }
-    if (!diceWinner) {
-      nextErrors.dice = 'Who won the dice roll?';
-    }
-    if (!firstPlayer) {
-      nextErrors.first = 'Who played first?';
+    if (!isBye) {
+      if (!opponentLeaderId) {
+        nextErrors.opponent = 'Choose your opponent’s leader.';
+      }
+      if (!diceWinner) {
+        nextErrors.dice = 'Who won the dice roll?';
+      }
+      if (!firstPlayer) {
+        nextErrors.first = 'Who played first?';
+      }
     }
 
     setErrors(nextErrors);
     if (
       Object.keys(nextErrors).length > 0 ||
-      !opponentLeaderId ||
-      !diceWinner ||
-      !firstPlayer
+      (!isBye && (!opponentLeaderId || !diceWinner || !firstPlayer))
     ) {
       return;
     }
 
     intentRef.current = 'done';
 
-    const input = {
-      tournamentId: tournament.id,
-      round,
-      opponentLeaderId,
-      opponentName: opponentName.trim() || undefined,
-      diceWinner,
-      firstPlayer,
-      myGameWins,
-      opponentGameWins,
-      notes: notes.trim() || undefined,
-    };
+    const input = isBye
+      ? {
+          tournamentId: tournament.id,
+          round,
+          myGameWins: 0,
+          opponentGameWins: 0,
+          isBye: true,
+          notes: notes.trim() || undefined,
+        }
+      : {
+          tournamentId: tournament.id,
+          round,
+          opponentLeaderId: opponentLeaderId ?? undefined,
+          opponentName: opponentName.trim() || undefined,
+          diceWinner: diceWinner ?? undefined,
+          firstPlayer: firstPlayer ?? undefined,
+          myGameWins,
+          opponentGameWins,
+          notes: notes.trim() || undefined,
+        };
 
     if (editing && existing) {
       updateMatch(existing.id, input);
@@ -327,126 +340,182 @@ export function MatchFormPage() {
                 <p className="mt-1.5 text-xs text-crimson-300">{errors.round}</p>
               ) : null}
             </div>
-            <div>
-              <label htmlFor="opponent-name" className="label">
-                Opponent name <span className="text-mist-600">(optional)</span>
-              </label>
-              <input
-                id="opponent-name"
-                className="field"
-                value={opponentName}
-                onChange={(event) => setOpponentName(event.target.value)}
-                placeholder="Who did you play?"
-              />
-            </div>
-          </div>
-
-          <LeaderPicker
-            label="Opponent’s leader"
-            value={opponentLeaderId}
-            onChange={(leaderId) => {
-              setOpponentLeaderId(leaderId);
-              setErrors((current) => ({ ...current, opponent: undefined }));
-            }}
-            error={errors.opponent}
-          />
-
-          <div>
-            <div className="mb-2 flex items-center gap-2">
-              <Dices className="size-4 text-gold-400/80" />
-              <span className="section-title">Dice &amp; turn order</span>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <SegmentedControl
-                label="Who won the dice?"
-                value={diceWinner}
-                onChange={handleDiceChange}
-                error={errors.dice}
-                options={[
-                  { value: 'me', label: 'Me' },
-                  { value: 'opponent', label: 'Opponent' },
-                ]}
-              />
-              <SegmentedControl
-                label="Who played first?"
-                value={firstPlayer}
-                onChange={handleFirstChange}
-                error={errors.first}
-                hint={
-                  firstTouched
-                    ? 'Set manually for this round.'
-                    : 'Follows the dice winner until you change it.'
-                }
-                options={[
-                  { value: 'me', label: 'Me' },
-                  { value: 'opponent', label: 'Opponent' },
-                ]}
-              />
-            </div>
-          </div>
-
-          <div>
-            <div className="mb-2 flex items-center justify-between gap-3">
-              <div className="flex items-center gap-2">
-                <Flag className="size-4 text-gold-400/80" />
-                <span className="section-title">Game score</span>
+            {!isBye ? (
+              <div>
+                <label htmlFor="opponent-name" className="label">
+                  Opponent name <span className="text-mist-600">(optional)</span>
+                </label>
+                <input
+                  id="opponent-name"
+                  className="field"
+                  value={opponentName}
+                  onChange={(event) => setOpponentName(event.target.value)}
+                  placeholder="Who did you play?"
+                />
               </div>
-              <span
-                className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] ${resultToneClass(
-                  previewResult,
-                )}`}
-              >
-                {myGameWins === 0 && opponentGameWins === 0 ? (
-                  'Enter games'
-                ) : (
-                  <>
-                    <Check className="size-3" />
-                    {resultLabel(previewResult)}
-                  </>
-                )}
-              </span>
-            </div>
-
-            <div className="mb-3 flex flex-wrap gap-2">
-              {QUICK_SCORES.map((score) => {
-                const active =
-                  myGameWins === score.my &&
-                  opponentGameWins === score.opponent;
-                return (
-                  <button
-                    key={score.label}
-                    type="button"
-                    onClick={() => {
-                      setMyGameWins(score.my);
-                      setOpponentGameWins(score.opponent);
-                    }}
-                    className={`rounded-lg border px-3 py-1.5 text-xs font-semibold transition ${
-                      active
-                        ? 'border-gold-400/50 bg-gold-400/12 text-gold-200'
-                        : 'border-white/10 bg-white/[0.035] text-mist-400 hover:border-white/20 hover:text-mist-200'
-                    }`}
-                  >
-                    {score.label}
-                  </button>
-                );
-              })}
-            </div>
-
-            <div className="grid grid-cols-2 gap-3">
-              <ScoreStepper
-                label="Your games"
-                value={myGameWins}
-                onChange={setMyGameWins}
-                tone="you"
-              />
-              <ScoreStepper
-                label="Opponent games"
-                value={opponentGameWins}
-                onChange={setOpponentGameWins}
-                tone="opponent"
-              />
-            </div>
+            ) : null}
           </div>
+
+          <button
+            type="button"
+            aria-pressed={isBye}
+            onClick={() => {
+              setIsBye((current) => !current);
+              setErrors({});
+            }}
+            className={`flex w-full items-center gap-3 rounded-xl border p-4 text-left transition ${
+              isBye
+                ? 'border-gold-400/45 bg-gold-400/[0.08]'
+                : 'border-white/10 bg-white/[0.035] hover:border-white/20'
+            }`}
+          >
+            <span
+              className={`flex size-9 shrink-0 items-center justify-center rounded-lg border ${
+                isBye
+                  ? 'border-gold-400/40 bg-gold-400/15 text-gold-200'
+                  : 'border-white/10 bg-white/5 text-mist-400'
+              }`}
+            >
+              <Flag className="size-4" />
+            </span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-sm font-semibold text-mist-100">
+                Bye win
+              </span>
+              <span className="block text-[11px] text-mist-500">
+                No opponent this round. Counts as a win.
+              </span>
+            </span>
+            <span
+              className={`relative h-6 w-11 shrink-0 rounded-full border transition ${
+                isBye
+                  ? 'border-gold-400/50 bg-gold-400/30'
+                  : 'border-white/15 bg-white/[0.06]'
+              }`}
+            >
+              <span
+                className={`absolute top-0.5 size-4 rounded-full bg-mist-100 transition-all ${
+                  isBye ? 'left-[1.4rem]' : 'left-0.5'
+                }`}
+              />
+            </span>
+          </button>
+
+          {isBye ? (
+            <div className="rounded-xl border border-gold-400/20 bg-gold-400/[0.05] p-4 text-sm leading-relaxed text-mist-300">
+              This round is logged as a win with no games played. Opponent,
+              dice, turn order, and game score are skipped.
+            </div>
+          ) : (
+            <>
+              <LeaderPicker
+                label="Opponent’s leader"
+                value={opponentLeaderId}
+                onChange={(leaderId) => {
+                  setOpponentLeaderId(leaderId);
+                  setErrors((current) => ({ ...current, opponent: undefined }));
+                }}
+                error={errors.opponent}
+              />
+
+              <div>
+                <div className="mb-2 flex items-center gap-2">
+                  <Dices className="size-4 text-gold-400/80" />
+                  <span className="section-title">Dice &amp; turn order</span>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <SegmentedControl
+                    label="Who won the dice?"
+                    value={diceWinner}
+                    onChange={handleDiceChange}
+                    error={errors.dice}
+                    options={[
+                      { value: 'me', label: 'Me' },
+                      { value: 'opponent', label: 'Opponent' },
+                    ]}
+                  />
+                  <SegmentedControl
+                    label="Who played first?"
+                    value={firstPlayer}
+                    onChange={handleFirstChange}
+                    error={errors.first}
+                    hint={
+                      firstTouched
+                        ? 'Set manually for this round.'
+                        : 'Follows the dice winner until you change it.'
+                    }
+                    options={[
+                      { value: 'me', label: 'Me' },
+                      { value: 'opponent', label: 'Opponent' },
+                    ]}
+                  />
+                </div>
+              </div>
+
+              <div>
+                <div className="mb-2 flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-2">
+                    <Flag className="size-4 text-gold-400/80" />
+                    <span className="section-title">Game score</span>
+                  </div>
+                  <span
+                    className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] ${resultToneClass(
+                      previewResult,
+                    )}`}
+                  >
+                    {myGameWins === 0 && opponentGameWins === 0 ? (
+                      'Enter games'
+                    ) : (
+                      <>
+                        <Check className="size-3" />
+                        {resultLabel(previewResult)}
+                      </>
+                    )}
+                  </span>
+                </div>
+
+                <div className="mb-3 flex flex-wrap gap-2">
+                  {QUICK_SCORES.map((score) => {
+                    const active =
+                      myGameWins === score.my &&
+                      opponentGameWins === score.opponent;
+                    return (
+                      <button
+                        key={score.label}
+                        type="button"
+                        onClick={() => {
+                          setMyGameWins(score.my);
+                          setOpponentGameWins(score.opponent);
+                        }}
+                        className={`rounded-lg border px-3 py-1.5 text-xs font-semibold transition ${
+                          active
+                            ? 'border-gold-400/50 bg-gold-400/12 text-gold-200'
+                            : 'border-white/10 bg-white/[0.035] text-mist-400 hover:border-white/20 hover:text-mist-200'
+                        }`}
+                      >
+                        {score.label}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  <ScoreStepper
+                    label="Your games"
+                    value={myGameWins}
+                    onChange={setMyGameWins}
+                    tone="you"
+                  />
+                  <ScoreStepper
+                    label="Opponent games"
+                    value={opponentGameWins}
+                    onChange={setOpponentGameWins}
+                    tone="opponent"
+                  />
+                </div>
+              </div>
+            </>
+          )}
 
           <div>
             <label htmlFor="match-notes" className="label">

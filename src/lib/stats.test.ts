@@ -32,6 +32,12 @@ describe('getMatchResult', () => {
     expect(getMatchResult({ myGameWins: 0, opponentGameWins: 2 })).toBe('loss');
     expect(getMatchResult({ myGameWins: 1, opponentGameWins: 1 })).toBe('draw');
   });
+
+  it('treats a bye as a win regardless of score', () => {
+    expect(getMatchResult({ myGameWins: 0, opponentGameWins: 0, isBye: true })).toBe(
+      'win',
+    );
+  });
 });
 
 describe('summarize', () => {
@@ -57,6 +63,21 @@ describe('summarize', () => {
     expect(record.matches).toBe(0);
     expect(record.matchWinRate).toBeNull();
     expect(record.gameWinRate).toBeNull();
+  });
+
+  it('counts byes as wins without adding games', () => {
+    const record = summarize([
+      match({ id: 'a', isBye: true, myGameWins: 0, opponentGameWins: 0 }),
+      match({ id: 'b', myGameWins: 1, opponentGameWins: 2 }),
+    ]);
+
+    expect(record.matches).toBe(2);
+    expect(record.wins).toBe(1);
+    expect(record.losses).toBe(1);
+    expect(record.gamesWon).toBe(1);
+    expect(record.gamesLost).toBe(2);
+    expect(record.matchWinRate).toBe(0.5);
+    expect(record.gameWinRate).toBeCloseTo(1 / 3);
   });
 });
 
