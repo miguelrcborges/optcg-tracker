@@ -26,7 +26,7 @@ import { formatPlacing, getPlacingTone, placingToneClass } from '../lib/placing'
 import { EmptyState } from '../components/EmptyState';
 import { LeaderImage } from '../components/LeaderImage';
 import { PageHeader } from '../components/PageHeader';
-import { RecordBar, RecordPill, ResultBadge } from '../components/ResultBadge';
+import { RecordBar, ResultBadge } from '../components/ResultBadge';
 import { StatCard } from '../components/StatCard';
 import { ConfirmDialog } from '../components/ConfirmDialog';
 import type { Match } from '../types';
@@ -147,7 +147,6 @@ export function TournamentPage() {
               </p>
 
               <div className="mt-4 flex flex-wrap items-center gap-2">
-                <RecordPill record={record} />
                 {placing ? (
                   <span className={`chip ${placingTone}`}>
                     <Trophy className="size-3.5" />

@@ -1,6 +1,5 @@
 import type { MatchResult } from '../types';
 import {
-  formatRecord,
   resultLabel,
   resultToneClass,
   type MatchRecord,
@@ -20,17 +19,6 @@ export function ResultBadge({
       )} ${size === 'sm' ? 'px-2 py-0.5 text-[9px]' : 'px-2.5 py-1 text-[10px]'}`}
     >
       {resultLabel(result)}
-    </span>
-  );
-}
-
-export function RecordPill({ record }: { record: MatchRecord }) {
-  return (
-    <span className="inline-flex items-baseline gap-1 rounded-full border border-white/10 bg-white/[0.045] px-2.5 py-1 text-xs font-semibold text-mist-100">
-      <span className="tabular-nums">{formatRecord(record)}</span>
-      <span className="text-[10px] font-medium uppercase tracking-[0.1em] text-mist-500">
-        {record.draws > 0 ? 'W–L–D' : 'W–L'}
-      </span>
     </span>
   );
 }

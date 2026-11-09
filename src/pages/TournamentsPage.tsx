@@ -15,7 +15,7 @@ import { formatPlacing, getPlacingTone, placingToneClass } from '../lib/placing'
 import { EmptyState } from '../components/EmptyState';
 import { LeaderImage } from '../components/LeaderImage';
 import { PageHeader } from '../components/PageHeader';
-import { RecordBar, RecordPill } from '../components/ResultBadge';
+import { RecordBar } from '../components/ResultBadge';
 
 export function TournamentsPage() {
   const { data, leaderMap } = useData();
@@ -130,17 +130,16 @@ export function TournamentsPage() {
                       ) : null}
                     </div>
 
-                    <div className="mt-3 flex items-center gap-2">
-                      <RecordPill record={record} />
-                      <span className="text-[11px] text-mist-500">
+                    <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1.5">
+                      <span className="whitespace-nowrap text-[11px] text-mist-500">
                         {record.matches} round{record.matches === 1 ? '' : 's'}
                       </span>
                       {placing ? (
                         <span
-                          className={`ml-auto inline-flex min-w-0 items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-semibold ${placingTone}`}
+                          className={`chip ml-auto font-semibold ${placingTone}`}
                         >
                           <Trophy className="size-3 shrink-0" />
-                          <span className="truncate">{placing}</span>
+                          {placing}
                         </span>
                       ) : null}
                     </div>
