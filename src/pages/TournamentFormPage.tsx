@@ -18,6 +18,13 @@ const FORMAT_SUGGESTIONS = [
   'Online',
 ];
 
+function parseCount(value: string): number | undefined {
+  const trimmed = value.trim();
+  if (!trimmed) return undefined;
+  const parsed = Number(trimmed);
+  return Number.isInteger(parsed) && parsed > 0 ? parsed : undefined;
+}
+
 export function TournamentFormPage() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -33,6 +40,12 @@ export function TournamentFormPage() {
   const [date, setDate] = useState(existing?.date ?? todayISO());
   const [format, setFormat] = useState(existing?.format ?? '');
   const [location, setLocation] = useState(existing?.location ?? '');
+  const [placing, setPlacing] = useState(
+    existing?.placing?.toString() ?? '',
+  );
+  const [playerCount, setPlayerCount] = useState(
+    existing?.playerCount?.toString() ?? '',
+  );
   const [leaderId, setLeaderId] = useState<string | null>(
     existing?.leaderId ?? null,
   );
@@ -40,6 +53,8 @@ export function TournamentFormPage() {
   const [errors, setErrors] = useState<{
     name?: string;
     date?: string;
+    placing?: string;
+    playerCount?: string;
     leader?: string;
   }>({});
 
@@ -60,9 +75,24 @@ export function TournamentFormPage() {
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
 
+    const parsedPlacing = parseCount(placing);
+    const parsedPlayerCount = parseCount(playerCount);
     const nextErrors: typeof errors = {};
     if (!name.trim()) nextErrors.name = 'Give this event a name.';
     if (!date) nextErrors.date = 'Pick the event date.';
+    if (placing.trim() && parsedPlacing === undefined) {
+      nextErrors.placing = 'Enter a whole number greater than 0.';
+    }
+    if (playerCount.trim() && parsedPlayerCount === undefined) {
+      nextErrors.playerCount = 'Enter a whole number greater than 0.';
+    }
+    if (
+      parsedPlacing !== undefined &&
+      parsedPlayerCount !== undefined &&
+      parsedPlacing > parsedPlayerCount
+    ) {
+      nextErrors.placing = 'Placing cannot be higher than the player count.';
+    }
     if (!leaderId) nextErrors.leader = 'Choose the leader you played.';
 
     setErrors(nextErrors);
@@ -73,6 +103,8 @@ export function TournamentFormPage() {
       date,
       format: format.trim() || undefined,
       location: location.trim() || undefined,
+      placing: parsedPlacing,
+      playerCount: parsedPlayerCount,
       leaderId,
       notes: notes.trim() || undefined,
     };
@@ -170,6 +202,55 @@ export function TournamentFormPage() {
               placeholder="Local game store, city, or online"
             />
           </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label htmlFor="event-placing" className="label">
+                Final placing
+              </label>
+              <input
+                id="event-placing"
+                type="number"
+                inputMode="numeric"
+                min={1}
+                step={1}
+                className="field"
+                value={placing}
+                onChange={(event) => setPlacing(event.target.value)}
+                placeholder="3"
+              />
+              {errors.placing ? (
+                <p className="mt-1.5 text-xs text-crimson-300">
+                  {errors.placing}
+                </p>
+              ) : null}
+            </div>
+
+            <div>
+              <label htmlFor="event-player-count" className="label">
+                Total players
+              </label>
+              <input
+                id="event-player-count"
+                type="number"
+                inputMode="numeric"
+                min={1}
+                step={1}
+                className="field"
+                value={playerCount}
+                onChange={(event) => setPlayerCount(event.target.value)}
+                placeholder="24"
+              />
+              {errors.playerCount ? (
+                <p className="mt-1.5 text-xs text-crimson-300">
+                  {errors.playerCount}
+                </p>
+              ) : null}
+            </div>
+          </div>
+          <p className="text-[11px] text-mist-500">
+            Placing is shown as “3rd/24” in the tournament list.
+          </p>
 
           <LeaderPicker
             label="Your leader"

@@ -14,12 +14,25 @@ export const leaderSchema = z.object({
   custom: z.boolean().optional(),
 });
 
+const optionalPositiveInt = z.preprocess((value) => {
+  if (value === null || value === undefined || value === '') return undefined;
+  // Older versions stored placing as free text. Drop values that cannot be
+  // read as a positive integer instead of rejecting the whole ledger.
+  const parsed = typeof value === 'string' ? Number(value) : value;
+  if (typeof parsed !== 'number' || !Number.isInteger(parsed) || parsed < 1) {
+    return undefined;
+  }
+  return parsed;
+}, z.number().int().positive().optional());
+
 export const tournamentSchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Date must be YYYY-MM-DD'),
   location: z.string().optional(),
   format: z.string().optional(),
+  placing: optionalPositiveInt,
+  playerCount: optionalPositiveInt,
   leaderId: z.string().min(1),
   notes: z.string().optional(),
   createdAt: z.string().min(1),

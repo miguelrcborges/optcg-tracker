@@ -10,6 +10,7 @@ import {
   Plus,
   StickyNote,
   Trash2,
+  Trophy,
 } from 'lucide-react';
 import { useData } from '../context/DataContext';
 import { useToast } from '../context/ToastContext';
@@ -21,6 +22,7 @@ import {
   sortByRound,
   summarize,
 } from '../lib/stats';
+import { formatPlacing, getPlacingTone, placingToneClass } from '../lib/placing';
 import { EmptyState } from '../components/EmptyState';
 import { LeaderImage } from '../components/LeaderImage';
 import { PageHeader } from '../components/PageHeader';
@@ -74,6 +76,13 @@ export function TournamentPage() {
   }
 
   const leader = leaderMap.get(tournament.leaderId);
+  const placing = formatPlacing(
+    tournament.placing,
+    tournament.playerCount,
+  );
+  const placingTone = placingToneClass(
+    getPlacingTone(tournament.placing, tournament.playerCount),
+  );
 
   return (
     <div>
@@ -139,6 +148,12 @@ export function TournamentPage() {
 
               <div className="mt-4 flex flex-wrap items-center gap-2">
                 <RecordPill record={record} />
+                {placing ? (
+                  <span className={`chip ${placingTone}`}>
+                    <Trophy className="size-3.5" />
+                    Final placing: {placing}
+                  </span>
+                ) : null}
                 <span className="chip">
                   {record.gamesWon}–{record.gamesLost} games
                 </span>

@@ -9,16 +9,13 @@ import {
 } from 'lucide-react';
 import { useData } from '../context/DataContext';
 import { formatEventDate } from '../lib/dates';
-import { getMatchResult, summarize } from '../lib/stats';
+import { summarize } from '../lib/stats';
 import { leaderGradient } from '../lib/leaders';
+import { formatPlacing, getPlacingTone, placingToneClass } from '../lib/placing';
 import { EmptyState } from '../components/EmptyState';
 import { LeaderImage } from '../components/LeaderImage';
 import { PageHeader } from '../components/PageHeader';
-import {
-  RecordBar,
-  RecordPill,
-  ResultBadge,
-} from '../components/ResultBadge';
+import { RecordBar, RecordPill } from '../components/ResultBadge';
 
 export function TournamentsPage() {
   const { data, leaderMap } = useData();
@@ -78,11 +75,13 @@ export function TournamentsPage() {
             const matches = matchesByTournament.get(tournament.id) ?? [];
             const record = summarize(matches);
             const leader = leaderMap.get(tournament.leaderId);
-            const lastResult = matches.length
-              ? getMatchResult(
-                  [...matches].sort((a, b) => b.round - a.round)[0],
-                )
-              : null;
+            const placing = formatPlacing(
+              tournament.placing,
+              tournament.playerCount,
+            );
+            const placingTone = placingToneClass(
+              getPlacingTone(tournament.placing, tournament.playerCount),
+            );
 
             return (
               <Link
@@ -136,9 +135,12 @@ export function TournamentsPage() {
                       <span className="text-[11px] text-mist-500">
                         {record.matches} round{record.matches === 1 ? '' : 's'}
                       </span>
-                      {lastResult ? (
-                        <span className="ml-auto">
-                          <ResultBadge result={lastResult} size="sm" />
+                      {placing ? (
+                        <span
+                          className={`ml-auto inline-flex min-w-0 items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-semibold ${placingTone}`}
+                        >
+                          <Trophy className="size-3 shrink-0" />
+                          <span className="truncate">{placing}</span>
                         </span>
                       ) : null}
                     </div>

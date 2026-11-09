@@ -31,6 +31,10 @@ export interface Tournament {
   date: string;
   location?: string;
   format?: string;
+  /** Final placement, for example 3 for 3rd place. */
+  placing?: number;
+  /** Total number of players in the event. */
+  playerCount?: number;
   leaderId: string;
   notes?: string;
   createdAt: string;

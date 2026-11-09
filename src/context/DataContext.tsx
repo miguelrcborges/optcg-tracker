@@ -26,6 +26,8 @@ export interface TournamentInput {
   date: string;
   location?: string;
   format?: string;
+  placing?: number;
+  playerCount?: number;
   leaderId: string;
   notes?: string;
 }
@@ -110,6 +112,8 @@ export function DataProvider({ children }: { children: ReactNode }) {
       date: input.date,
       location: cleanOptional(input.location),
       format: cleanOptional(input.format),
+      placing: input.placing,
+      playerCount: input.playerCount,
       leaderId: input.leaderId,
       notes: cleanOptional(input.notes),
       createdAt: timestamp,
@@ -135,6 +139,8 @@ export function DataProvider({ children }: { children: ReactNode }) {
                 date: input.date,
                 location: cleanOptional(input.location),
                 format: cleanOptional(input.format),
+                placing: input.placing,
+                playerCount: input.playerCount,
                 leaderId: input.leaderId,
                 notes: cleanOptional(input.notes),
                 updatedAt: nowISO(),

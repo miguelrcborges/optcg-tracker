@@ -9,6 +9,8 @@ const sampleData: AppData = {
       id: 'event-1',
       name: 'Friday Locals',
       date: '2026-02-06',
+      placing: 5,
+      playerCount: 24,
       leaderId: 'OP01-001',
       createdAt: '2026-02-06T18:00:00.000Z',
       updatedAt: '2026-02-06T18:00:00.000Z',
@@ -46,6 +48,8 @@ describe('parseBackup', () => {
   it('reads an exported backup envelope', () => {
     const parsed = parseBackup(exportBackup(sampleData));
     expect(parsed.data.tournaments).toHaveLength(1);
+    expect(parsed.data.tournaments[0].placing).toBe(5);
+    expect(parsed.data.tournaments[0].playerCount).toBe(24);
     expect(parsed.data.matches[0].myGameWins).toBe(2);
     expect(parsed.exportedAt).toBeTruthy();
   });
@@ -64,6 +68,22 @@ describe('parseBackup', () => {
     expect(() => parseBackup(JSON.stringify({ hello: 'world' }))).toThrow(
       /not a Grand Line Ledger backup/i,
     );
+  });
+
+  it('normalizes legacy string placements', () => {
+    const legacy = {
+      ...sampleData,
+      tournaments: [
+        {
+          ...sampleData.tournaments[0],
+          placing: '3',
+          playerCount: '24',
+        },
+      ],
+    };
+    const parsed = parseBackup(JSON.stringify(legacy));
+    expect(parsed.data.tournaments[0].placing).toBe(3);
+    expect(parsed.data.tournaments[0].playerCount).toBe(24);
   });
 
   it('rejects malformed matches', () => {
